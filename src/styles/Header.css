@@ -1,0 +1,24 @@
+.header {
+  background: white;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+.header .bottom_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid grey;
+  width: 100%;
+}

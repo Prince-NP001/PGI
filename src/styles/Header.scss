@@ -1,0 +1,18 @@
+@import "./Variables";
+
+.header{
+    background: white;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .img{
+        @include flexCenter;
+        margin-top: 1.5rem;
+    }
+    .bottom_header{
+        @include flexCenter;
+        border-top:1px solid grey ;
+        width: 100%;
+    }
+}
