@@ -1,5 +1,5 @@
 import './App.css';
-import Header from './Components/Header/Header';
+import Header from './Components/Header/Header.tsx';
 import Home from './Components/Home/Home';
 
 function App() {

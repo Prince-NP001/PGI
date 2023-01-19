@@ -1,15 +1,39 @@
 @import "./Variables";
 
+
+* {
+  margin: 0;
+  padding: 0;
+}
 .header {
+  padding: 0;
   background: white;
-  height: 30vh;
   display: flex;
   flex-direction: column;
   width: 100%;
+  .header-top{
+    @include flexCenter;
+    margin-top: 0px;
+    height: 6vh;
+    color: white;
+    background: #383876;
+    width: 100%;
+   .box{ 
+    @include flexCenter;
+    width: 84%;
+    margin-left: 8%;
+    .link {
+      @include flexCenter;
+      font-size: 0.7rem;
+      
+    }}
+  }
   .img {
     @include flexCenter;
-    margin-top: 1.5rem;
-    width: 80%;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    margin-bottom: 1rem;
+    width: 95%;
   }
   .divider {
     background: rgba(78, 78, 78, 0);
@@ -17,13 +41,17 @@
   }
   .bottom_header {
     @include flexCenter;
-
     width: 80%;
+    
     .btn {
       &:hover {
         background: red;
         color: white;
       }
     }
+  }
+
+  .MuiMenu-list{
+    width: 800px !important;
   }
 }
