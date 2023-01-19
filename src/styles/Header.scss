@@ -1,18 +1,29 @@
 @import "./Variables";
 
-.header{
-    background: white;
-    height: 30vh;
-    display: flex;
-    flex-direction: column;
+.header {
+  background: white;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  .img {
+    @include flexCenter;
+    margin-top: 1.5rem;
+    width: 80%;
+  }
+  .divider {
+    background: rgba(78, 78, 78, 0);
     width: 100%;
-    .img{
-        @include flexCenter;
-        margin-top: 1.5rem;
+  }
+  .bottom_header {
+    @include flexCenter;
+
+    width: 80%;
+    .btn {
+      &:hover {
+        background: red;
+        color: white;
+      }
     }
-    .bottom_header{
-        @include flexCenter;
-        border-top:1px solid grey ;
-        width: 100%;
-    }
+  }
 }

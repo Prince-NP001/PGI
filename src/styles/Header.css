@@ -10,15 +10,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
   margin-top: 1.5rem;
+  width: 80%;
+}
+
+.header .divider {
+  background: rgba(78, 78, 78, 0);
+  width: 100%;
 }
 
 .header .bottom_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
-  border-top: 1px solid grey;
-  width: 100%;
+  width: 80%;
+}
+
+.header .bottom_header .btn:hover {
+  background: red;
+  color: white;
 }
