@@ -1,0 +1,370 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom {
+  background: #f8f9fa;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  padding: 0;
+  z-index: 1;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 2s ease-in-out;
+}
+
+.header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  height: 4vh;
+  color: #f8f9fa;
+  background: #383876;
+  padding-left: 5%;
+  width: 100%;
+}
+
+.header .header-top .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  padding-left: 12%;
+}
+
+@media screen and (min-width: 0) and (max-width: 1050px) {
+  .header .header-top .box .btn_group {
+    display: none;
+  }
+}
+
+.header .header-top .box .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.header .header-top .box .main-menu {
+  border-top: black;
+  width: 100%;
+}
+
+@media screen and (min-width: 1050px) {
+  .header .header-top .box .main-menu {
+    display: none;
+  }
+}
+
+.header .header-top .box .main-menu-list {
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 100px;
+  left: 5%;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1050px) {
+  .header .header-top .box .main-menu-list {
+    display: none;
+  }
+}
+
+.header .header-top .box .main-menu-list .list_btn {
+  height: 100%;
+}
+
+.header .header-top .box .main-menu-list .list_btn:focus-visible {
+  background-color: #d94148;
+  color: #f8f9fa;
+}
+
+.header .header-top .box .main-menu-list .list_btn:hover {
+  background-color: #d94148;
+  color: #f8f9fa;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head:hover {
+  background-color: #f8f4ea;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .text_btn:hover {
+  color: #d94148;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .text_item {
+  text-align: left;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list {
+  font-size: 0.9rem;
+  font-weight: 500;
+  list-style: none;
+  margin-left: 2%;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li {
+  padding-bottom: 1.5vw;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li:hover {
+  color: #d94148;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li::before {
+  content: "•";
+  color: purple;
+  display: inline-block;
+  width: 1em;
+  margin-right: -0.45em;
+}
+
+.header .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.header .divider {
+  background: rgba(78, 78, 78, 0);
+  width: 100%;
+}
+
+.header .bottom_header {
+  justify-content: space-around;
+  width: 80%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .header .bottom_header {
+    display: none;
+  }
+}
+
+.header .text_btn:hover {
+  color: #d94148;
+  background-color: white;
+}
+
+.header .text_btn .btn:hover {
+  background: #d94148;
+  color: white;
+}
+
+.header .css-13eg511-MuiButtonBase-root-MuiListItemButton-root {
+  background-color: white;
+}
+
+.header .MuiMenu-list {
+  width: 800px !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header-bottom {
+  background: #f8f9fa;
+  flex-direction: column;
+  width: 100%;
+}
+
+.header {
+  padding: 0;
+  z-index: 1;
+  background: #f8f9fa;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 2s ease-in-out;
+}
+
+.header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+  height: 4vh;
+  color: #f8f9fa;
+  background: #383876;
+  padding-left: 5%;
+  width: 100%;
+}
+
+.header .header-top .box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 82%;
+  padding-left: 12%;
+}
+
+@media screen and (min-width: 0) and (max-width: 1050px) {
+  .header .header-top .box .btn_group {
+    display: none;
+  }
+}
+
+.header .header-top .box .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.header .header-top .box .main-menu {
+  border-top: black;
+  width: 100%;
+}
+
+@media screen and (min-width: 1050px) {
+  .header .header-top .box .main-menu {
+    display: none;
+  }
+}
+
+.header .header-top .box .main-menu-list {
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  top: 100px;
+  left: 5%;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 1050px) {
+  .header .header-top .box .main-menu-list {
+    display: none;
+  }
+}
+
+.header .header-top .box .main-menu-list .list_btn {
+  height: 100%;
+}
+
+.header .header-top .box .main-menu-list .list_btn:focus-visible {
+  background-color: #d94148;
+  color: #f8f9fa;
+}
+
+.header .header-top .box .main-menu-list .list_btn:hover {
+  background-color: #d94148;
+  color: #f8f9fa;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head:hover {
+  background-color: #f8f4ea;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .text_btn:hover {
+  color: #d94148;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .text_item {
+  text-align: left;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid {
+  padding-top: 3vw;
+  padding-bottom: 3vw;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list {
+  font-size: 0.9rem;
+  font-weight: 500;
+  list-style: none;
+  margin-left: 2%;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li {
+  padding-bottom: 1.5vw;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li:hover {
+  color: #d94148;
+}
+
+.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li::before {
+  content: "•";
+  color: purple;
+  display: inline-block;
+  width: 1em;
+  margin-right: -0.45em;
+}
+
+.header .img {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.header .divider {
+  background: rgba(78, 78, 78, 0);
+  width: 100%;
+}
+
+.header .bottom_header {
+  justify-content: space-around;
+  width: 80%;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+  .header .bottom_header {
+    display: none;
+  }
+}
+
+.header .text_btn:hover {
+  color: #d94148;
+  background-color: white;
+}
+
+.header .text_btn .btn:hover {
+  background: #d94148;
+  color: white;
+}
+
+.header .css-13eg511-MuiButtonBase-root-MuiListItemButton-root {
+  background-color: white;
+}
+
+.header .MuiMenu-list {
+  width: 800px !important;
+}

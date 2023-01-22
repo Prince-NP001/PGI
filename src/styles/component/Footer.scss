@@ -1,0 +1,68 @@
+@import "../Variables";
+
+.footer {
+  padding-top: 60px;
+  width: 68%;
+  padding-left: 16%;
+  .footer_1 {
+    justify-content: center;
+    .content {
+      text-align: center;
+
+      margin-top: 2vh;
+      font-size: 1.1em;
+      line-height: 1.5;
+      padding: 10px 0;
+      color: $primary-black;
+    }
+  }
+  .footer_2 {
+    padding-top: 5em;
+
+    .header {
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: 0.1px;
+      line-height: 1.2;
+      font-family: Poppins, sans-serif;
+    }
+    .content {
+      color: $primary-black;
+      font-size: 1em;
+      line-height: 1.5;
+      padding-top: 16px;
+      font-family: Poppins, sans-serif;
+    }
+  }
+  .img {
+    padding-top: 10em;
+  }
+}
+.animateLeft {
+  animation-duration: 2s;
+  animation-name: animate_left;
+}
+@keyframes animate_left {
+  0% {
+    translate: -100px 0px;
+    opacity: 0;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+  }
+}
+.animateRight {
+  animation-duration: 2s;
+  animation-name: animate_right;
+}
+@keyframes animate_right {
+  0% {
+    translate: 100px 0px;
+    opacity: 0;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+  }
+}
