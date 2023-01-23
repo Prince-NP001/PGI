@@ -11,15 +11,15 @@ import {
   ButtonGroup,
   IconButton,
   Grid,
+  Container,
 } from "@mui/material";
 import React, { useState } from "react";
-
 
 import logo from "../../images/Header_and_Footer/header_logo.png";
 import logo_right from "../../images/Header_and_Footer/logo.png";
 import { Box } from "@mui/system";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import NavHead from "./Dropdowns";
+import NavHead from "./NavHead";
 import NavBottom from "./NavBottom";
 // import Dropdowns from "./Dropdowns";
 
@@ -37,8 +37,10 @@ const Header = () => {
     setAnchorEl(null);
   };
   return (
-    <Box sx={{position:"relative"}}>
-    <NavHead/>
+    <Box>
+      <NavHead />
+
+      {/* <NavBottom /> */}
 
       {/* <AppBar sx={{ width: "100%" }} color="transparent" position="sticky">
         <Toolbar

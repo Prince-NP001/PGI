@@ -17,7 +17,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 2s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 2s ease-in-out;
 }
 
 .header .header-top {
@@ -28,7 +29,7 @@
   height: 4vh;
   color: #f8f9fa;
   background: #383876;
-  padding-left: 5%;
+
   width: 100%;
 }
 
@@ -36,8 +37,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 82%;
-  padding-left: 12%;
 }
 
 @media screen and (min-width: 0) and (max-width: 1050px) {
@@ -118,22 +117,48 @@
   padding-bottom: 3vw;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list {
   font-size: 0.9rem;
   font-weight: 500;
   list-style: none;
-  margin-left: 2%;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li {
   padding-bottom: 1.5vw;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li:hover {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li:hover {
   color: #d94148;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li::before {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li::before {
   content: "•";
   color: purple;
   display: inline-block;
@@ -202,7 +227,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 2s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 2s ease-in-out;
 }
 
 .header .header-top {
@@ -213,7 +239,7 @@
   height: 4vh;
   color: #f8f9fa;
   background: #383876;
-  padding-left: 5%;
+
   width: 100%;
 }
 
@@ -221,8 +247,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 82%;
-  padding-left: 12%;
 }
 
 @media screen and (min-width: 0) and (max-width: 1050px) {
@@ -303,22 +327,48 @@
   padding-bottom: 3vw;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list {
   font-size: 0.9rem;
   font-weight: 500;
   list-style: none;
-  margin-left: 2%;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li {
   padding-bottom: 1.5vw;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li:hover {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li:hover {
   color: #d94148;
 }
 
-.header .header-top .box .main-menu-list .status_indux_head .States_grid .states_list li::before {
+.header
+  .header-top
+  .box
+  .main-menu-list
+  .status_indux_head
+  .States_grid
+  .states_list
+  li::before {
   content: "•";
   color: purple;
   display: inline-block;

@@ -5,6 +5,7 @@
   padding: 0;
 }
 .header-bottom {
+ 
   background: $primary-white;
   flex-direction: column;
   width: 100%;
@@ -13,25 +14,20 @@
   padding: 0;
   z-index: 1;
   background: $primary-white;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+ 
+
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 2s ease-in-out;
 
   .header-top {
-    @include flexCenter;
     margin-top: 0px;
-    height: 4vh;
+    height: 45px;
     color: $primary-white;
-    background: $primary-purple;
-    padding-left: 5%;
-    width: 100%;
+  
 
     .box {
       @include flexCenter;
-      width: 82%;
-      padding-left: 12%;
+
       .btn_group {
         @media screen and (min-width: 0) and (max-width: 1050px) {
           display: none;
@@ -48,70 +44,7 @@
           display: none;
         }
       }
-      .main-menu-list {
-        color: $primary-black;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-        top: 100px;
-        left: 5%;
-        position: relative;
-        z-index: 1;
-        @media screen and (min-width: 1050px) {
-          display: none;
-        }
-        .list_btn {
-          height: 100%;
-          &:focus-visible {
-            background-color: $primary-red;
-            color: $primary-white;
-          }
-          &:hover {
-            background-color: $primary-red;
-            color: $primary-white;
-          }
-        }
-        .status_indux_head {
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          width: 94%;
-          margin-left: 3%;
-          margin-top: 2vh;
-          margin-bottom: 2vh;
-          &:hover {
-            background-color: $primary-white;
-          }
-          .text_btn {
-            &:hover {
-              color: $primary-red;
-            }
-          }
-          .text_item {
-            text-align: left;
-          }
-          .States_grid {
-            padding-top: 3vw;
-            padding-bottom: 3vw;
-            .states_list {
-              font-size: 0.9rem;
-              font-weight: 500;
-              list-style: none;
-              margin-left: 2%;
-
-              li {
-                padding-bottom: 1.5vw;
-                &:hover {
-                  color: $primary-red;
-                }
-                &::before {
-                  content: "•";
-                  color: $primary-purple;
-                  display: inline-block;
-                  width: 1em;
-                  margin-right: -0.45em;
-                }
-              }
-            }
-          }
-        }
-      }
+  
     }
   }
 
@@ -149,5 +82,75 @@
   }
   .MuiMenu-list {
     width: 800px !important;
+  }
+ 
+}
+.MuiAppBar-root{
+  z-index: 0 !important;
+}
+.MuiContainer-root{
+  padding-left: 0px;
+}
+.dropdown{
+  position: absolute;
+  top: 50px;
+  background-color:$primary-white;
+  color: $primary-black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  z-index: 1000;
+
+ 
+    .list_btn {
+      height: 100%;
+      width: 100%;
+      &:focus-visible {
+        background-color: $primary-red;
+        color: $primary-white;
+      }
+      &:hover {
+        background-color: $primary-red;
+        color: $primary-white;
+      }
+    }
+    .status_indux_head {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin-top: 2vh;
+      margin-bottom: 2vh;
+      &:hover {
+        background-color: $primary-white;
+      }
+      .text_btn {
+        &:hover {
+          color: $primary-red;
+        }
+      }
+      .text_item {
+        text-align: left;
+      }
+      .States_grid {
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        .states_list {
+          font-size: 0.9rem;
+          font-weight: 500;
+          list-style: none;
+          margin-left: 2%;
+
+          li {
+            padding-bottom: 1.5vw;
+            &:hover {
+              color: $primary-red;
+            }
+            &::before {
+              content: "•";
+              color: $primary-purple;
+              display: inline-block;
+              width: 1em;
+              margin-right: -0.45em;
+            }
+          }
+        }
+      }
+    
   }
 }
