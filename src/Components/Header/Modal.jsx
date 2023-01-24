@@ -65,7 +65,7 @@ const Modal = () => {
         >
           <List className="status_indux_head" component={Paper} disablePadding>
             <Grid className="States_grid" container>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} sm={6} md={3}>
                 <ul className="states_list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
@@ -79,7 +79,7 @@ const Modal = () => {
                   <li>Gujarat</li>
                 </ul>
               </Grid>
-              <Grid item xs={12} md={3}>
+              <Grid item xs={12} sm={6} md={3}>
                 <ul className="states_list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
@@ -93,7 +93,7 @@ const Modal = () => {
                   <li>Gujarat</li>
                 </ul>
               </Grid>
-              <Grid item xs={12} sm={3}>
+              <Grid item xs={12} sm={6} md={3}>
                 <ul className="states_list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
@@ -107,7 +107,7 @@ const Modal = () => {
                   <li>Gujarat</li>
                 </ul>
               </Grid>
-              <Grid item xs={12} sm={3}>
+              <Grid item xs={12} sm={6} md={3}>
                 <ul className="states_list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>

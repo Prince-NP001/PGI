@@ -8,8 +8,8 @@ const LinksFooter = () => {
     <>
       <Box className="linksfooter">
         <Container maxWidth={"lg"}>
-          <Grid container columns={16}>
-            <Grid item md={4}>
+          <Grid container columns={16} spacing={4} justifyContent={"center"}>
+            <Grid item xs={12} md={4} paddingTop={3}>
               <Typography paddingLeft={2} variant="h5">
                 Links
               </Typography>
@@ -24,7 +24,7 @@ const LinksFooter = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid item md={6} marginLeft={3}>
+            <Grid item xs={12} md={6} paddingTop={3}>
               <Typography paddingLeft={2} variant="h5">
                 Categories
               </Typography>
@@ -45,23 +45,18 @@ const LinksFooter = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid item md={5} paddingLeft={5}>
+            <Grid item xs={12} md={5} paddingTop={3}>
               <Box component="img" src={pic} />
               <Typography
                 className="about_pgid_nested_nic"
                 paragraph
-                align="left"
                 sx={{ paddingBottom: "0" }}
               >
                 This site is designed, developed, maintained and hosted by
                 National Informatics Centre (NIC), Ministry of Electronics &
                 Information Technology.
               </Typography>
-              <Typography
-                className="about_pgid_nested_nic"
-                paragraph
-                align="left"
-              >
+              <Typography className="about_pgid_nested_nic" paragraph>
                 Content owned & provided by Department of School Education &
                 Literacy, Ministry of Education, Government of India
               </Typography>
@@ -70,19 +65,22 @@ const LinksFooter = () => {
         </Container>
       </Box>
       <Box className="footer_bottom">
+        {" "}
         <Container maxWidth={"lg"} disableGutters>
           <Grid container spacing={2}>
-            <Grid item xs={8}>
+            <Grid item md={8}>
               <Typography
                 gutterBottom
-                alignItems="center"
+                textAlign={"center"}
+                alignItems={"center"}
                 className="text_footer"
+                sx={{ flexWrap: "wrap" }}
               >
                 © Copyright 2023 Department of School Education & Literacy,
                 Ministry of Education
               </Typography>
             </Grid>
-            <Grid textAlign="right" item xs={4}>
+            <Grid textAlign="right" item md={4}>
               <Typography
                 gutterBottom
                 alignItems="center"

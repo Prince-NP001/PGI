@@ -12,9 +12,16 @@ const Footer_middle = () => {
 
   console.log(inView1);
   return (
-    <Box component="div">
+    <Container maxWidth={"lg"}>
       <Grid container alignItems="center" justify="center" spacing={15}>
-        <Grid className="footer_2" ref={dataRef1} item xs={6}>
+        <Grid
+          className="footer_2"
+          ref={dataRef1}
+          item
+          md={6}
+          xs={12}
+          sx={{ justifyContent: { xs: "center", md: "center" } }}
+        >
           <Box className={` ${inView1 ? "animateLeft" : ""}`}>
             <Typography className="header" variant="h3">
               Data Source
@@ -31,27 +38,50 @@ const Footer_middle = () => {
           </Box>
         </Grid>
         <Grid
-          ref={imgRef1}
           item
-          textAlign="right"
+          sx={{ justifyContent: { xs: "center", md: "right" } }}
           className={`${"img"} ${inView2 ? "animateRight" : ""}`}
-          xs={6}
+          md={6}
+          xs={12}
         >
-          <Box component="img" src={pic} />
+          <Box
+            sx={{ maxWidth: "95%" }}
+            ref={imgRef1}
+            component="img"
+            src={pic}
+          />
         </Grid>
       </Grid>
       <Grid container alignItems="center" justify="center" spacing={15}>
         <Grid
-          ref={imgRef2}
           item
+          order={{ xs: 2, md: 1 }}
+          sx={{ justifyContent: { xs: "center", md: "left" } }}
           textAlign="left"
           className={`${"img"} ${inView3 ? "animateLeft" : ""}`}
-          xs={6}
+          md={6}
+          xs={12}
         >
-          <Box component="img" src={pic2} />
+          <Box
+            sx={{ maxWidth: "95%" }}
+            ref={imgRef2}
+            component="img"
+            src={pic2}
+          />
         </Grid>
-        <Grid ref={dataRef2} item xs={6}>
-          <Box className={`${"footer_2"} ${inView4 ? "animateRight" : ""}`}>
+        <Grid
+          order={{ xs: 1, md: 2 }}
+          sx={{
+            justifyContent: { xs: "center", md: "right" },
+          }}
+          item
+          md={6}
+          xs={12}
+        >
+          <Box
+            ref={dataRef2}
+            className={`${"footer_2"} ${inView4 ? "animateRight" : ""}`}
+          >
             <Typography className="header" variant="h3">
               Methodology
             </Typography>
@@ -68,7 +98,7 @@ const Footer_middle = () => {
           </Box>
         </Grid>
       </Grid>
-    </Box>
+    </Container>
   );
 };
 

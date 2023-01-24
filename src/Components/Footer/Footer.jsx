@@ -6,7 +6,7 @@ import Footer_middle from "./Footer_middle";
 import LinksFooter from "./LinksFooter";
 const Footer = () => {
   return (
-    <Box justifySelf="center" className="footer">
+    <Box className="footer">
       <Container maxWidth={"lg"}>
         <Box component="div" className="footer_1">
           <Box component="div">
@@ -17,7 +17,7 @@ const Footer = () => {
               How it Works
             </Typography>
           </Box>
-          <Box className="content" component="div" sx={{}}>
+          <Box className="content" component="div" sx={{ flexWrap: "wrap" }}>
             <Typography variant="p">
               Performance Grading Index (PGI) is a index that measures the
               performance of states in school education undertaken by Department

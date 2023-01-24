@@ -22,14 +22,18 @@
       font-size: 1.5em;
       font-weight: 600;
       letter-spacing: 0.1px;
+      background-color: white;
       line-height: 1.2;
       font-family: Poppins, sans-serif;
+      margin-top: 1.6em;
+      padding: 2em 0;
     }
     .content {
       color: $primary-black;
+    
       font-size: 1em;
       line-height: 1.5;
-      padding-top: 16px;
+      padding-top: 1px;
       font-family: Poppins, sans-serif;
     }
   }
