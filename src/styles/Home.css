@@ -1,0 +1,28 @@
+/* home banner styling  */
+.slider-push-button {
+  padding: 10px;
+}
+
+.banner-slider {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-banner-slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 1s linear;
+}
+
+.home-banner-slider .banner-page {
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
