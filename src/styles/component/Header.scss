@@ -15,7 +15,8 @@
   display: flex;
   flex-direction: column;
  
-  z-index: 1000 !important;
+  z-index: 1000 ;
+  position: relative;
   
 }
 .header {
@@ -180,7 +181,8 @@
 }
 
 .MuiAppBar-root {
-  z-index: 0 !important;
+  position: sticky!important;
+  top: 0!important;
 }
 
 .MuiContainer-root {
