@@ -1,19 +1,18 @@
 import React from "react";
-// import DatamapsIndia from "react-datamaps-india";
-import "../../styles/IndiaMap.css";
+import "../../styles/IndiaMap.scss";
 
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import highchartsMap from "highcharts/modules/map";
-import proj4 from "proj4";
+// import proj4 from "proj4";
 import mapDataIN from "@highcharts/map-collection/countries/in/custom/in-all-disputed.geo.json";
 
 highchartsMap(Highcharts);
 
 export default function IndiaMaps() {
-  if (typeof window !== "undefined") {
-    window.proj4 = window.proj4 || proj4;
-  }
+  // if (typeof window !== "undefined") {
+  //   window.proj4 = window.proj4 || proj4;
+  // }
   var data = [
     ["madhya pradesh", 1],
     ["uttar pradesh", 1],
@@ -615,8 +614,8 @@ export default function IndiaMaps() {
     chart: {
       map: "countries/in/custom/in-all-disputed",
       animation: true,
-      // pinchType: "none",
-      // zoomType: "none",
+      pinchType: "none",
+      zoomType: "none",
       width:
         document.body.offsetWidth > 1040
           ? 480
@@ -713,7 +712,6 @@ export default function IndiaMaps() {
         constructorType={"mapChart"}
         highcharts={Highcharts}
         options={mapOptions}
-        // id={"mapChart"}
       />
     </div>
   );

@@ -1,14 +1,14 @@
 import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
-import pic from "../../images/Header_and_Footer/NIC.png";
+import pic from "../images/Header_and_Footer/NIC.png";
 import React from "react";
 
 const LinksFooter = () => {
   return (
     <>
       <Box className="linksfooter">
-        <Container maxWidth={"lg"}>
-          <Grid container columns={16} spacing={4} justifyContent={"center"}>
+        <Container maxWidth={"xl"}>
+          <Grid justifyContent={"center"} container columns={16} spacing={4}  >
             <Grid item xs={12} md={4} paddingTop={3}>
               <Typography className="link" paddingLeft={2} variant="h2">
                 Links
@@ -66,13 +66,13 @@ const LinksFooter = () => {
       </Box>
       <Box className="footer_bottom">
         {" "}
-        <Container maxWidth={"lg"} disableGutters>
-          <Grid container spacing={2}>
+        <Container maxWidth={"xl"} disableGutters>
+          <Grid container justifyContent={"space-evenly"}  >
             <Grid item md={8}>
               <Typography
                 gutterBottom
-                textAlign={"center"}
-                alignItems={"center"}
+                textAlign={"left"}
+                alignItems={"initial"}
                 className="text_footer"
                 sx={{ flexWrap: "wrap" }}
               >

@@ -10,20 +10,13 @@ export default function Banner() {
     }, 4000);
   }, [Slider_position]);
 
-  useEffect(() => {
-    document.querySelector(".banner-slider").style.height =
-      "calc(" +
-      document.querySelector(".home-banner-slider").getBoundingClientRect()
-        .height +
-      "px + 30px)";
-  }, []);
-
   const left_slider_push_button = () => {
     if (Slider_position >= 0) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(0)";
     } else {
+      clearTimeout(slider_timeout);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(calc(" + Slider_position + "vw + 100vw))";
       setSlider_position(Slider_position + 100);

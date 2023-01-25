@@ -1,3 +1,50 @@
+.slider-push-button {
+  padding: 0.9em 1.2em;
+  z-index: 10;
+  cursor: pointer;
+  background-color: #afb7dc;
+  border: none;
+  &:hover {
+    background-color: #383876;
+  }
+}
+
+.banner-slider {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d7dbec;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin: auto;
+  & > button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    &:first-child {
+      left: 0;
+    }
+    &:last-child {
+      right: 0;
+    }
+  }
+  .home-banner-slider {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7dbec;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease-in-out;
+    margin: auto;
+  }
+}
+
+//single banner pages design
+
 .banner-page {
   min-width: 100vw;
   position: relative;
@@ -9,100 +56,88 @@
   height: 100%;
   font-weight: 600;
   margin: auto;
-}
 
-.banner-page .first-slider-page {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  text-align: left;
-}
-
-.banner-page .first-slider-page .left-part {
-  max-width: 41vw;
-  font-size: 1em;
-  padding-right: 15%;
-  font-family: Poppins, sans-serif;
-  line-height: 1.6em;
-}
-
-.banner-page .first-slider-page .left-part h1 {
-  font-size: 3.125em;
-  margin-bottom: 1em;
-  line-height: initial;
+  .first-slider-page {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: left;
+    .left-part {
+      max-width: 41vw;
+      font-size: 1em;
+      padding-right: 15%;
+      font-family: Poppins, sans-serif;
+      line-height: 1.6em;
+      h1 {
+        font-size: 3.125em;
+        margin-bottom: 1em;
+        line-height: initial;
+      }
+    }
+  }
+  .last-slider-page {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 90vw;
+    }
+  }
 }
 
 .banner-page-type2 {
   height: 100%;
   justify-content: space-evenly;
-}
-
-.banner-page-type2 .floater-type2-middle-part {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5em;
-  justify-content: center;
-}
-
-.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info {
-  background-color: white;
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 10px;
-}
-
-.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info h2 {
-  font-size: 2em;
-}
-.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info p {
-  box-sizing: border-box;
-  word-wrap: break-word;
-}
-
-button {
-  cursor: pointer;
-}
-
-.banner-page-type2 .floater-type2-middle-part button {
-  border: 4px solid #fff;
-  border-radius: 8px;
-  color: #fff;
-  font-size: 1.125em;
-  font-weight: 500;
-  letter-spacing: 0.11px;
-  padding: 0;
-  position: relative;
-  text-align: center;
-  text-decoration: none;
-  background-color: #383876;
-}
-.banner-page-type2 .floater-type2-middle-part button:hover {
-  background-color: #d94148;
-  border-color: #d94148;
-}
-
-.banner-page-type2 > p {
-  max-width: 30vw;
-  text-align: left;
-}
-
-.banner-page .last-slider-page {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.banner-page .last-slider-page img {
-  width: 90vw;
+  .floater-type2-middle-part {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+    justify-content: center;
+    .floater-middle-circle-info {
+      background-color: white;
+      height: 300px;
+      width: 300px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 10px;
+      h2 {
+        font-size: 2em;
+      }
+      p {
+        box-sizing: border-box;
+        word-wrap: break-word;
+        text-align: center;
+      }
+    }
+    button {
+      border: 4px solid #fff;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 1.125em;
+      font-weight: 500;
+      letter-spacing: 0.11px;
+      padding: 0;
+      position: relative;
+      text-align: center;
+      text-decoration: none;
+      background-color: #383876;
+      &:hover {
+        background-color: #d94148;
+        border-color: #d94148;
+      }
+    }
+  }
+  & > p {
+    max-width: 30vw;
+    text-align: left;
+  }
 }
 
 /* responsive design for banner slider */
