@@ -2,15 +2,17 @@ import React from "react";
 
 import { Box } from "@mui/system";
 
-import NavBottom from "./Navbar";
-import NavHead from "./NavTop";
+import Navbar from "./Navbar";
+import HeaderTop from "./HeaderTop";
+import { AppBar, Toolbar } from "@mui/material";
 
 const Header = () => {
   return (
-    <Box sx={{ backgroundColor: "transparent" }}>
-      <NavHead />
-
-      <NavBottom />
+    <AppBar>
+      <Toolbar className="head" disableGutters>
+        <HeaderTop />
+        <Navbar />
+      </Toolbar>
 
       {/* <AppBar sx={{ width: "100%" }} color="transparent" position="sticky">
         <Toolbar
@@ -62,7 +64,7 @@ const Header = () => {
           </Box>
         </Toolbar>
       </AppBar> */}
-    </Box>
+    </AppBar>
   );
 };
 

@@ -30,7 +30,7 @@ import { textAlign } from "@mui/system";
 import NavBottom from "./Navbar";
 import Modal from "./Modal";
 const arr = ["HOME", "ABOUT PGI-D"];
-const NavHead = () => {
+const HeaderTop = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
   const [currentOpenId, setCurrentOpenId] = useState(
@@ -152,4 +152,4 @@ const NavHead = () => {
   );
 };
 
-export default NavHead;
+export default HeaderTop;

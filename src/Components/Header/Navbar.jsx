@@ -28,7 +28,7 @@ import "../../styles/component/Header.scss";
 import ExpandLess from "@mui/icons-material/ExpandLess";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 
-const NavBottom = () => {
+const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
   const [currentOpenId, setCurrentOpenId] = useState(
@@ -52,7 +52,7 @@ const NavBottom = () => {
     // setCurrentOpenId(prev =>({...prev,[id]:!currentOpenId[id]}))
   };
   return (
-    <Box className="header_2" disableGutters>
+    <Box className="header_2" disableGutters color="inherit">
       <Container
         maxWidth={"lg"}
         sx={{ backgroundColor: "white" }}
@@ -70,18 +70,9 @@ const NavBottom = () => {
       </Container>
       <Divider className="divider" sx={{ margin: 0 }} />
       <Container maxWidth={"lg"}>
-        <ul>
-          <Box
-            disableGutters
-            component="div"
-            sx={{
-              width: "100%",
-              display: { sm: "none", md: "flex" },
-              justifyContent: "space-between",
-            }}
-            className="bottom_header"
-          >
-            <Button
+        <Box disableGutters component="div" className="bottom_header">
+          <ul>
+            <li
               className="btn"
               variant="text"
               color="inherit"
@@ -89,8 +80,8 @@ const NavBottom = () => {
               size="large"
             >
               Home
-            </Button>
-            <Button
+            </li>
+            <li
               className="btn"
               variant="text"
               color="inherit"
@@ -98,10 +89,9 @@ const NavBottom = () => {
               size="large"
             >
               ABOUT PGI-D
-            </Button>
+            </li>
 
-            <Button
-              endIcon={<KeyboardArrowDownIcon />}
+            <li
               id="state-index-menu"
               onClick={handleClick}
               aria-controls={open ? "states-index-menu" : undefined}
@@ -113,7 +103,8 @@ const NavBottom = () => {
               size="large"
             >
               STATES INDEX
-            </Button>
+              <KeyboardArrowDownIcon />
+            </li>
             <Menu
               id="state-index-menu"
               className="state-index-menu"
@@ -194,7 +185,7 @@ const NavBottom = () => {
               </MenuItem>
             </Menu>
 
-            <Button
+            <li
               size="large"
               endIcon={<KeyboardArrowDownIcon />}
               id="report-menu"
@@ -207,7 +198,8 @@ const NavBottom = () => {
               color="inherit"
             >
               REPORTS
-            </Button>
+              <KeyboardArrowDownIcon />
+            </li>
             <Menu
               id="report-menu"
               anchorEl={anchorEl}
@@ -233,7 +225,7 @@ const NavBottom = () => {
               </MenuItem>
             </Menu>
 
-            <Button
+            <li
               size="large"
               endIcon={<KeyboardArrowDownIcon />}
               id="categories-menu"
@@ -246,7 +238,8 @@ const NavBottom = () => {
               aria-expanded={open ? "true" : undefined}
             >
               CATEGORIES
-            </Button>
+              <KeyboardArrowDownIcon />
+            </li>
             <Menu
               id="categories-menu"
               anchorEl={anchorEl}
@@ -299,12 +292,12 @@ const NavBottom = () => {
                 Governance Processes(GP)
               </MenuItem>
             </Menu>
-          </Box>
-        </ul>
+          </ul>
+        </Box>
       </Container>
       <Divider className="divider" sx={{ margin: 0 }} />
     </Box>
   );
 };
 
-export default NavBottom;
+export default Navbar;

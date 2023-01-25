@@ -12,17 +12,20 @@ const Footer_middle = () => {
 
   console.log(inView1);
   return (
-    <Container maxWidth={"lg"}>
-      <Grid container alignItems="center" justify="center" spacing={15}>
+    <Container disablePadding maxWidth={"lg"}>
+      <Grid container className="footer_2" alignItems="flex-start" spacing={16}>
         <Grid
-          className="footer_2"
           ref={dataRef1}
           item
-          md={6}
+          md={6.5}
           xs={12}
           sx={{ justifyContent: { xs: "center", md: "center" } }}
         >
-          <Box className={` ${inView1 ? "animateLeft" : ""}`}>
+          <Box
+            className={` ${inView1 ? "animateLeft" : ""}`}
+            paddingRight={4}
+            component="div"
+          >
             <Typography className="header" variant="h3">
               Data Source
             </Typography>
@@ -41,7 +44,7 @@ const Footer_middle = () => {
           item
           sx={{ justifyContent: { xs: "center", md: "right" } }}
           className={`${"img"} ${inView2 ? "animateRight" : ""}`}
-          md={6}
+          md={5.5}
           xs={12}
         >
           <Box
@@ -52,14 +55,14 @@ const Footer_middle = () => {
           />
         </Grid>
       </Grid>
-      <Grid container alignItems="center" justify="center" spacing={15}>
+      <Grid container alignItems="flex-start" justify="center" spacing={15}>
         <Grid
           item
           order={{ xs: 2, md: 1 }}
           sx={{ justifyContent: { xs: "center", md: "left" } }}
           textAlign="left"
           className={`${"img"} ${inView3 ? "animateLeft" : ""}`}
-          md={6}
+          md={5.5}
           xs={12}
         >
           <Box
@@ -75,10 +78,11 @@ const Footer_middle = () => {
             justifyContent: { xs: "center", md: "right" },
           }}
           item
-          md={6}
+          md={6.5}
           xs={12}
         >
           <Box
+            variant="p"
             ref={dataRef2}
             className={`${"footer_2"} ${inView4 ? "animateRight" : ""}`}
           >

@@ -15,31 +15,34 @@
     }
   }
   .footer_2 {
-    padding-top: 5em;
-    padding-bottom: 5em;
+    margin-top: 4vh;
 
     .header {
+      padding-top: 7vh;
       font-size: 1.5em;
       font-weight: 600;
       letter-spacing: 0.1px;
       background-color: white;
       line-height: 1.2;
       font-family: Poppins, sans-serif;
-      margin-top: 1.6em;
-      padding: 2em 0;
+     
+ 
     }
     .content {
       color: $primary-black;
-    
       font-size: 1em;
       line-height: 1.5;
-      padding-top: 1px;
+      padding-top: 3vh;
       font-family: Poppins, sans-serif;
     }
+    .MuiGrid-item{
+      padding-top: 0!important;
+    }
+    .img{
+    }
+    
   }
-  .img {
-    padding-top: 10em;
-  }
+  
 }
 .animateLeft {
   animation-duration: 2s;
@@ -74,18 +77,33 @@
   padding: 3em 0;
   color: $primary-white;
   background-color: $primary-purple;
+  .link{
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 500;
+    letter-spacing: .07px;
+  }
   .about_pgid{
     list-style-type: ">";
+     
+    font-weight: 400;
     padding-top: 2vh;
     line-height: 2;
   letter-spacing: .14px;
   font-size: .975em;
+  li{
+
+    &:hover{
+      color: $primary-red;
+    }
+  }
   .about_pgid_nested{
     list-style-type: disc;
       padding-left: 16px;
       line-height: 2;
       letter-spacing: .14px;
       font-size: .85em;
+      color: #fff;
       
   }
 }

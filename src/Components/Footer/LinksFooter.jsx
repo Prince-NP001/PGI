@@ -10,7 +10,7 @@ const LinksFooter = () => {
         <Container maxWidth={"lg"}>
           <Grid container columns={16} spacing={4} justifyContent={"center"}>
             <Grid item xs={12} md={4} paddingTop={3}>
-              <Typography paddingLeft={2} variant="h5">
+              <Typography className="link" paddingLeft={2} variant="h2">
                 Links
               </Typography>
               <ul className="about_pgid">
@@ -25,7 +25,7 @@ const LinksFooter = () => {
               </ul>
             </Grid>
             <Grid item xs={12} md={6} paddingTop={3}>
-              <Typography paddingLeft={2} variant="h5">
+              <Typography className="link" paddingLeft={2} variant="h2">
                 Categories
               </Typography>
               <ul className="about_pgid">
