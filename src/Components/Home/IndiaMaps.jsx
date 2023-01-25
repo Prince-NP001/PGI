@@ -7,6 +7,7 @@ import HighchartsReact from "highcharts-react-official";
 import highchartsMap from "highcharts/modules/map";
 import proj4 from "proj4";
 import mapDataIN from "@highcharts/map-collection/countries/in/custom/in-all-disputed.geo.json";
+
 highchartsMap(Highcharts);
 
 export default function IndiaMaps() {
@@ -14,91 +15,608 @@ export default function IndiaMaps() {
     window.proj4 = window.proj4 || proj4;
   }
   var data = [
-    ["madhya pradesh", 1, 2, 3],
-    ["uttar pradesh", 1, 1, 2],
-    ["karnataka", 2, 1, 2],
-    ["nagaland", 3, 1, 2],
-    ["bihar", 4, 3, 3],
-    ["lakshadweep", 5, 3, 3],
-    ["andaman and nicobar", 6, 3, 2],
-    ["assam", 7, 2, 4],
-    ["west bengal", 8, 7, 5],
-    ["puducherry", 9, 6, 4],
-    ["daman and diu", 0, 2, 4],
-    ["gujarat", 1, 2, 1],
-    ["rajasthan", 2, 3, 5],
-    ["dadara and nagar havelli", 3, 1, 6],
-    ["chhattisgarh", 5, 7, 0],
-    ["tamil nadu", 5, 8, 1],
-    ["chandigarh", 4, 0, 0],
-    ["punjab", 0, 2, 5],
-    ["haryana", 0, 5, 3],
-    ["andhra pradesh", 1, 6, 8],
-    ["maharashtra", 4, 2, 4],
-    ["himachal pradesh", 7, 6, 5],
-    ["meghalaya", 4, 6, 3],
-    ["kerala", 8, 5, 4],
-    ["telangana", 7, 6, 4],
-    ["mizoram", 5, 5, 2],
-    ["tripura", 6, 5, 2],
-    ["manipur", 7, 5, 3],
-    ["arunanchal pradesh", 2, 6, 3],
-    ["jharkhand", 2, 5, 3],
-    ["goa", 3, 4, 6],
-    ["nct of delhi", 3, 5, 8],
-    ["odisha", 6, 2, 6],
-    ["jammu and kashmir", 6, 2, 7],
-    ["sikkim", 4, 1, 5],
-    ["uttarakhand", 5, 6, 3],
-    ["ladakh", 9, 6, 1],
+    ["madhya pradesh", 1],
+    ["uttar pradesh", 1],
+    ["karnataka", 1],
+    ["nagaland", 1],
+    ["bihar", 1],
+    ["lakshadweep", 1],
+    ["andaman and nicobar", 1],
+    ["assam", 1],
+    ["west bengal", 1],
+    ["puducherry", 1],
+    ["daman and diu", 1],
+    ["gujarat", 1],
+    ["rajasthan", 1],
+    ["dadara and nagar havelli", 1],
+    ["chhattisgarh", 1],
+    ["tamil nadu", 1],
+    ["chandigarh", 1],
+    ["punjab", 1],
+    ["haryana", 1],
+    ["andhra pradesh", 1],
+    ["maharashtra", 1],
+    ["himachal pradesh", 1],
+    ["meghalaya", 1],
+    ["kerala", 1],
+    ["telangana", 1],
+    ["mizoram", 1],
+    ["tripura", 1],
+    ["manipur", 1],
+    ["arunanchal pradesh", 1],
+    ["jharkhand", 1],
+    ["goa", 1],
+    ["nct of delhi", 1],
+    ["odisha", 1],
+    ["jammu and kashmir", 1],
+    ["sikkim", 1],
+    ["uttarakhand", 1],
+    ["ladakh", 1],
   ];
-  // var data2 = [
-  //   { name: "madhya pradesh", a: 1, b: 2, c: 3 },
-  //   { name: "uttar pradesh", a: 1, b: 2, c: 3 },
-  //   { name: "karnataka", a: 1, b: 2, c: 3 },
-  //   { name: "nagaland", a: 1, b: 2, c: 3 },
-  //   { name: "bihar", a: 1, b: 2, c: 3 },
-  //   { name: "lakshadweep", a: 1, b: 2, c: 3 },
-  //   { name: "andaman and nicobar", a: 1, b: 2, c: 3 },
-  //   { name: "assam", a: 1, b: 2, c: 3 },
-  //   { name: "west bengal", a: 1, b: 2, c: 3 },
-  //   { name: "puducherry", a: 1, b: 2, c: 3 },
-  //   { name: "daman and diu", a: 1, b: 2, c: 3 },
-  //   { name: "gujarat", a: 1, b: 2, c: 3 },
-  //   { name: "rajasthan", a: 1, b: 2, c: 3 },
-  //   { name: "dadara and nagar havelli", a: 1, b: 2, c: 3 },
-  //   { name: "chhattisgarh", a: 1, b: 2, c: 3 },
-  //   { name: "tamil nadu", a: 1, b: 2, c: 3 },
-  //   { name: "chandigarh", a: 1, b: 2, c: 3 },
-  //   { name: "punjab", a: 1, b: 2, c: 3 },
-  //   { name: "haryana", a: 1, b: 2, c: 3 },
-  //   { name: "andhra pradesh", a: 1, b: 2, c: 3 },
-  //   { name: "maharashtra", a: 1, b: 2, c: 3 },
-  //   { name: "himachal pradesh", a: 1, b: 2, c: 3 },
-  //   { name: "meghalaya", a: 1, b: 2, c: 3 },
-  //   { name: "kerala", a: 1, b: 2, c: 3 },
-  //   { name: "telangana", a: 1, b: 2, c: 3 },
-  //   { name: "mizoram", a: 1, b: 2, c: 3 },
-  //   { name: "tripura", a: 1, b: 2, c: 3 },
-  //   { name: "manipur", a: 1, b: 2, c: 3 },
-  //   { name: "arunanchal pradesh", a: 1, b: 2, c: 3 },
-  //   { name: "jharkhand", a: 1, b: 2, c: 3 },
-  //   { name: "goa", a: 1, b: 2, c: 3 },
-  //   { name: "nct of delhi", a: 1, b: 2, c: 3 },
-  //   { name: "odisha", a: 1, b: 2, c: 3 },
-  //   { name: "jammu and kashmir", a: 1, b: 2, c: 3 },
-  //   { name: "sikkim", a: 1, b: 2, c: 3 },
-  //   { name: "uttarakhand", a: 1, b: 2, c: 3 },
-  //   { name: "ladakh", a: 1, b: 2, c: 3 },
-  // ];
+  var data1 = [
+    [
+      "madhya pradesh",
+      {
+        daksh: 1,
+        utkarsh: 2,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "uttar pradesh",
+      {
+        daksh: 1,
+        utkarsh: 1,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "karnataka",
+      {
+        daksh: 2,
+        utkarsh: 1,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "nagaland",
+      {
+        daksh: 3,
+        utkarsh: 1,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "bihar",
+      {
+        daksh: 4,
+        utkarsh: 3,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "lakshadweep",
+      {
+        daksh: 5,
+        utkarsh: 3,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "andaman and nicobar",
+      {
+        daksh: 6,
+        utkarsh: 3,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "assam",
+      {
+        daksh: 7,
+        utkarsh: 2,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "west bengal",
+      {
+        daksh: 8,
+        utkarsh: 7,
+        atiuttam: 5,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "puducherry",
+      {
+        daksh: 9,
+        utkarsh: 6,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "daman and diu",
+      {
+        daksh: 0,
+        utkarsh: 2,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "gujarat",
+      {
+        daksh: 1,
+        utkarsh: 2,
+        atiuttam: 1,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "rajasthan",
+      {
+        daksh: 2,
+        utkarsh: 3,
+        atiuttam: 5,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "dadara and nagar havelli",
+      {
+        daksh: 3,
+        utkarsh: 1,
+        atiuttam: 6,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "chhattisgarh",
+      {
+        daksh: 5,
+        utkarsh: 7,
+        atiuttam: 0,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "tamil nadu",
+      {
+        daksh: 5,
+        utkarsh: 8,
+        atiuttam: 1,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "chandigarh",
+      {
+        daksh: 4,
+        utkarsh: 0,
+        atiuttam: 0,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "punjab",
+      {
+        daksh: 0,
+        utkarsh: 2,
+        atiuttam: 5,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "haryana",
+      {
+        daksh: 0,
+        utkarsh: 5,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "andhra pradesh",
+      {
+        daksh: 1,
+        utkarsh: 6,
+        atiuttam: 8,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "maharashtra",
+      {
+        daksh: 4,
+        utkarsh: 2,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "himachal pradesh",
+      {
+        daksh: 7,
+        utkarsh: 6,
+        atiuttam: 5,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "meghalaya",
+      {
+        daksh: 4,
+        utkarsh: 6,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "kerala",
+      {
+        daksh: 8,
+        utkarsh: 5,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "telangana",
+      {
+        daksh: 7,
+        utkarsh: 6,
+        atiuttam: 4,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "mizoram",
+      {
+        daksh: 5,
+        utkarsh: 5,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "tripura",
+      {
+        daksh: 6,
+        utkarsh: 5,
+        atiuttam: 2,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "manipur",
+      {
+        daksh: 7,
+        utkarsh: 5,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "arunanchal pradesh",
+      {
+        daksh: 2,
+        utkarsh: 6,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "jharkhand",
+      {
+        daksh: 2,
+        utkarsh: 5,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "goa",
+      {
+        daksh: 3,
+        utkarsh: 4,
+        atiuttam: 6,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "nct of delhi",
+      {
+        daksh: 3,
+        utkarsh: 5,
+        atiuttam: 8,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "odisha",
+      {
+        daksh: 6,
+        utkarsh: 2,
+        atiuttam: 6,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "jammu and kashmir",
+      {
+        daksh: 6,
+        utkarsh: 2,
+        atiuttam: 7,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "sikkim",
+      {
+        daksh: 4,
+        utkarsh: 1,
+        atiuttam: 5,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "uttarakhand",
+      {
+        daksh: 5,
+        utkarsh: 6,
+        atiuttam: 3,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+    [
+      "ladakh",
+      {
+        daksh: 9,
+        utkarsh: 6,
+        atiuttam: 1,
+        uttam: 2,
+        prachesta1: 1,
+        prachesta2: 3,
+        prachesta3: 4,
+        akanshi1: 2,
+        akanshi2: 5,
+        akanshi3: 7,
+      },
+    ],
+  ];
 
   const mapOptions = {
     chart: {
       map: "countries/in/custom/in-all-disputed",
-      renderTo: "india-map",
       animation: true,
-      pinchType: "none",
-      zoomType: "none",
+      // pinchType: "none",
+      // zoomType: "none",
       width:
         document.body.offsetWidth > 1040
           ? 480
@@ -119,6 +637,9 @@ export default function IndiaMaps() {
     accessibility: {
       description: "Showing India Detail",
     },
+    credits: {
+      enabled: false,
+    },
 
     title: {
       text: "",
@@ -128,10 +649,50 @@ export default function IndiaMaps() {
       enabled: false,
     },
 
+    // tooltip: {
+    //   useHTML: true,
+    //   formatter() {
+    //     let point = this,
+    //       vals;
+
+    //     data1.forEach((d) => {
+    //       if (d[0] == point.point["hc-key"]) {
+    //         vals = d[1];
+    //       }
+    //     });
+    //     return `
+    //     <b>${point.point["hc-key"]}</b><br/>
+    //     <table style="text-align:left;width:200px">
+    //     <tr>
+    //     <td><div id="box-color"></div><div><span>Daksh: </span><br><span>${vals.daksh} Districts</span></div></td>
+    //     <td><span>Utkarsh: </span><span>${vals.utkarsh} Districts</span></td>
+    //     </tr>
+    //     <tr>
+    //     <td><span>Ati-Uttam: </span><span>${vals.atiuttam} Districts</span></td>
+    //     <td><span>Uttam: </span><span>${vals.uttam} Districts</span></td>
+    //     </tr>
+    //     <tr>
+    //     <td><span>Prachesta-1: </span><span>${vals.prachesta1} Districts</span></td>
+    //     <td><span>Prachesta-2: </span><span>${vals.prachesta2} Districts</span></td>
+    //     </tr>
+    //     <tr>
+    //     <td><span>Prachesta-3: </span><span>${vals.prachesta3} Districts</span></td>
+    //     <td><span>Akanshi-1: </span><span>${vals.akanshi1} Districts</span></td>
+    //     </tr>
+    //     <tr>
+    //     <td><span>Akanshi-2: </span><span>${vals.akanshi2} Districts</span></td>
+    //     <td><span>Akanshi-3: </span><span>${vals.akanshi3} Districts</span></td>
+    //     </tr>
+    //     </table>`;
+    //   },
+    // },
+
     series: [
       {
         mapData: mapDataIN,
-        data: data,
+        data: data1,
+        type: "map",
+        allAreas: false,
         showInLegend: false,
         cursor: "auto",
         name: "States",
@@ -146,56 +707,9 @@ export default function IndiaMaps() {
         tooltip: {
           headerFormat: "",
           pointFormatter() {
-            return (
-              "<b>Prince</b><br/>" +
-              [
-                ["Daksh", "green"],
-                ["Utkarsh", "red"],
-                ["Ati-Uttam", "blue"],
-              ]
-                .map(
-                  (line) =>
-                    '<span style="color:' +
-                    line[1] +
-                    '">\u25CF</span> ' +
-                    line[0] +
-                    ": " +
-                    Highcharts.numberFormat(line[0], 0) +
-                    "<br/>"
-                )
-                .join("")
-            );
+            // console.log("testing");
+            return "";
           },
-
-          // pointFormat:
-          //   "<b style='color:red'>{point.name}</b><br>" +
-          //   "<div class='map-hover-container'>" +
-          //   "<div><span>Daksh</span><span>{point.a}</span></div>" +
-          //   "<div><span>Utkarsh</span><span>{point.b}</span></div>" +
-          //   "<div><span>Ati-Uttam</span><span>{point.c}</span></div>" +
-          //   "</div>",
-
-          // pointFormatter() {
-          //   return (
-          //     "<b>{point.name}</b><br/>" +
-          //     [
-          //       ["Daksh", "{point.a:.2f}", "green"],
-          //       ["Utkarsh", "{point.b:.2f}", "red"],
-          //       ["Ati-Uttam", "{point.c:.2f}", "blue"],
-          //     ]
-          //       .map(
-          //         (line) =>
-          //           '<span style="color:' +
-          //           line[2] +
-          //           '">\u25CF</span> ' +
-          //           line[0] +
-          //           ": " +
-          //           line[0] +
-          //           "<br/>"
-          //       )
-          //       .join("")
-          //   );
-          // },
         },
       },
     ],
@@ -207,7 +721,7 @@ export default function IndiaMaps() {
         constructorType={"mapChart"}
         highcharts={Highcharts}
         options={mapOptions}
-        id={"mapChart"}
+        // id={"mapChart"}
       />
     </div>
   );

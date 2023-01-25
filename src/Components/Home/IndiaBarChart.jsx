@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/IndiaMap.css";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
-import { fontWeight } from "@mui/system";
 
 export default function IndiaBarChart() {
   const options = {
@@ -12,6 +11,9 @@ export default function IndiaBarChart() {
       height: document.body.offsetWidth > 650 ? 550 : 320,
       animation: true,
     },
+    accessibility: {
+      description: "Showing India Detail in bar",
+    },
     title: {
       text: "",
     },
@@ -19,20 +21,35 @@ export default function IndiaBarChart() {
     xAxis: {
       type: "category",
       margin: 4,
+      categories: [
+        "Daksh",
+        "Utkarsh",
+        "Ati-Uttam",
+        "Uttam",
+        "Prachesta-1",
+        "Prachesta-2",
+        "Prachesta-3",
+        "Akanshi-1",
+        "Akanshi-2",
+        "Akanshi-3",
+      ],
+    },
+    credits: {
+      enabled: false,
     },
     yAxis: {
       title: {
         text: "",
       },
-      min: 0,
     },
+
     legend: {
       enabled: false,
     },
     plotOptions: {
       series: {
-        borderWidth: 20,
-        pointWidth: 40,
+        borderWidth: 2,
+        pointWidth: 25,
         dataLabels: {
           enabled: false,
         },
@@ -42,54 +59,12 @@ export default function IndiaBarChart() {
     series: [
       {
         name: "PGI-District Grading",
-        colorByPoint: true,
         cursor: "pointer",
-        data: [
-          {
-            name: "Daksh",
-            y: 15,
-          },
-          {
-            name: "Utkarsh",
-            y: 5,
-          },
-          {
-            name: "Ati-Uttam",
-            y: 148,
-          },
-          {
-            name: "Uttam",
-            y: 256,
-          },
-          {
-            name: "Prachesta-1",
-            y: 213,
-          },
-          {
-            name: "Prachesta-2",
-            y: 77,
-          },
-          {
-            name: "Prachesta-3",
-            y: 21,
-          },
-          {
-            name: "Akanshi-1",
-            y: 9,
-          },
-          {
-            name: "Akanshi-2",
-            y: 22,
-          },
-          {
-            name: "Akanshi-3",
-            y: 20,
-          },
-        ],
+        data: data,
         tooltip: {
           headerFormat: "",
           pointFormat:
-            "<span><b>{point.name}</b></span><br /> District: <b>{point.y:.2f}</b><br/>",
+            "<span><b>{point.name}</b></span><br /> District: <b>{point.y}</b><br/>",
         },
       },
     ],
@@ -101,3 +76,56 @@ export default function IndiaBarChart() {
     </div>
   );
 }
+
+var data = [
+  {
+    y: 0,
+    name: "Daksh",
+    color: "#0000ff",
+  },
+  {
+    y: 4,
+    name: "Utkarsh",
+    color: "#5050ff",
+  },
+  {
+    y: 148,
+    name: "Ati-Uttam",
+    color: "#7d7dff",
+  },
+  {
+    y: 256,
+    name: "Uttam",
+    color: "#009632",
+  },
+  {
+    y: 213,
+    name: "Prachesta-1",
+    color: "#96ff96",
+  },
+  {
+    y: 77,
+    name: "Prachesta-2",
+    color: "#ffff00",
+  },
+  {
+    y: 21,
+    name: "Prachesta-3",
+    color: "#ffc800",
+  },
+  {
+    y: 6,
+    name: "Akanshi-1",
+    color: "#fa9696",
+  },
+  {
+    y: 12,
+    name: "Akanshi-2",
+    color: "#fa6464",
+  },
+  {
+    y: 1,
+    name: "Akanshi-3",
+    color: "#fa4b4b",
+  },
+];
