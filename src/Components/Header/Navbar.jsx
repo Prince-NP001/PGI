@@ -60,11 +60,21 @@ const Navbar = () => {
       >
         <Grid container spacing={1} className="img">
           <Grid item xs={12} md={3.5} textAlign={"center"}>
-            <Box component="img" alt="Your logo." src={logo} />
+            <Box
+              sx={{ maxWidth: "90%" }}
+              component="img"
+              alt="Your logo."
+              src={logo}
+            />
           </Grid>
           <Grid item xs={12} md={6}></Grid>
           <Grid item xs={12} md={2.5} textAlign={"center"}>
-            <Box component="img" alt="Your logo." src={logo_right} />
+            <Box
+              sx={{ maxWidth: "90%" }}
+              component="img"
+              alt="Your logo."
+              src={logo_right}
+            />
           </Grid>
         </Grid>
       </Container>

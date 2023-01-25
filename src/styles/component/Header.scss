@@ -9,11 +9,13 @@
   background: $primary-white;
   flex-direction: column;
   width: 100%;
+
 }
 .head{
   display: flex;
   flex-direction: column;
-
+ 
+  z-index: 1000 !important;
   
 }
 .header {
@@ -26,7 +28,7 @@
 
   .header-top {
     margin-top: 0px;
-    z-index: 1;
+
     color: $primary-white;
 
     .box {
@@ -35,6 +37,7 @@
       .btn_group {
         @media screen and (min-width: 0) and (max-width: 1050px) {
           display: none;
+          z-index: -1;
         }
       }
 
@@ -49,6 +52,7 @@
 
         @media screen and (min-width: 1050px) {
           display: none;
+          z-index: -1;
         }
       }
     }
@@ -60,6 +64,7 @@
     margin-top: 1.2rem;
     margin-bottom: 1rem;
     width: 90%;
+
   }
 
   .divider {
@@ -98,6 +103,7 @@
       .btn_group {
         @media screen and (min-width: 0) and (max-width: 1050px) {
           display: none;
+          z-index: -1;
         }
       }
 
@@ -112,6 +118,7 @@
 
         @media screen and (min-width: 1050px) {
           display: none;
+          z-index: -1;
         }
       }
     }
@@ -132,9 +139,11 @@
 
   .bottom_header {
     color: $primary-black;
+    z-index: -1;
  
     @media screen and (min-width: 0px) and (max-width: $medium) {
       display: none;
+      z-index: -1;
     }
 
     .text_btn {
