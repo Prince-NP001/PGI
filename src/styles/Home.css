@@ -1,4 +1,7 @@
 /* home banner styling  */
+.main {
+  margin-top: 33vh;
+}
 .slider-push-button {
   padding: 0.9em 1.2em;
   z-index: 10;
@@ -33,6 +36,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
   margin: auto;
+  z-index: -1;
 }
 
 .banner-slider .home-banner-slider {
@@ -54,6 +58,7 @@
   background-color: #f4f7fc;
   position: relative;
   padding: 80px 0;
+  z-index: -1;
 }
 
 .chart-graph .chart-graph-content {
@@ -338,4 +343,5 @@ section.about-pgid .left-about-section > p {
 section.pgid-categories {
   background-color: #f4f7fc;
   position: relative;
+  z-index: -1;
 }
