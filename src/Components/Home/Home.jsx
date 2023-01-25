@@ -34,7 +34,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <div className="main">
       <section className="banner-slider">
         <Banner />
       </section>
@@ -87,7 +87,7 @@ export default function Home() {
       <section className="pgid-categories">
         <PGIDCategories />
       </section>
-    </>
+    </div>
   );
 }
 
