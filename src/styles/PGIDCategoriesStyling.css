@@ -1,0 +1,150 @@
+.pgid-card {
+  width: 21vw;
+  border-radius: 6px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  background-color: white;
+  cursor: context-menu;
+  text-align: left;
+  padding: 20px;
+  transition: background 0.3s ease;
+}
+
+.pgid-card > h2 {
+  -webkit-box-orient: vertical;
+  color: #131523;
+  font-size: 1.125em;
+  font-weight: 700;
+  letter-spacing: 0.07px;
+  line-height: 1.4;
+  margin: 5px 0;
+}
+
+.pgid-card > p {
+  font-size: 0.9em;
+  letter-spacing: 0;
+  line-height: 1.6;
+  margin: 0;
+  font-weight: 400;
+}
+
+.pgid-card > span {
+  cursor: pointer;
+  color: #e4212b;
+  position: relative;
+  font-size: 0.813em;
+}
+
+.pgid-card > span > .right-icon {
+  transform: translate(-20%, 28%);
+  transition: transform 0.2s ease-in;
+}
+
+.pgid-card > span:hover > .right-icon {
+  transform: translate(4%, 28%);
+}
+
+.pgid-card:hover {
+  background-color: #d94148;
+  color: white;
+}
+
+.pgid-card:hover > h2 {
+  color: white;
+}
+
+.pgid-card:hover > span {
+  color: white;
+}
+
+.categories-and-card {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 2em;
+  width: 80vw;
+  margin: auto;
+  padding: 5em 0 15em;
+}
+
+.categories-text-content {
+  max-width: 48vw;
+  text-align: left;
+}
+
+.categories-text-content > p {
+  color: #131523;
+  font-size: 1em;
+  letter-spacing: 0;
+  line-height: 1.5;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.categories-and-card .cards-section {
+  display: grid;
+  width: 80vw;
+  margin: auto;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  gap: 3em;
+}
+
+.categories-and-card .cards-section .pgid-card:nth-child(1),
+.categories-and-card .cards-section .pgid-card:nth-child(4) {
+  transform: translateY(50%);
+}
+
+.categories-and-card .cards-section .pgid-card:nth-child(3),
+.categories-and-card .cards-section .pgid-card:nth-child(6) {
+  transform: translateY(-50%);
+}
+
+@media only screen and (max-width: 992px) {
+  .categories-and-card .cards-section .pgid-card:nth-child(1),
+  .categories-and-card .cards-section .pgid-card:nth-child(4) {
+    transform: translateY(0%);
+  }
+  .categories-and-card .cards-section .pgid-card:nth-child(3),
+  .categories-and-card .cards-section .pgid-card:nth-child(6) {
+    transform: translateY(0%);
+  }
+  .categories-text-content {
+    max-width: 80vw;
+  }
+  .pgid-card {
+    width: 22vw;
+  }
+  .categories-and-card .cards-section {
+    gap: 1.5em;
+  }
+  .categories-and-card {
+    padding-bottom: 5em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .categories-and-card .cards-section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .pgid-card {
+    width: 80vw;
+  }
+
+  .categories-text-content {
+    max-width: 80vw;
+    text-align: left;
+  }
+
+  .categories-text-content > h1 {
+    font-size: 2em;
+  }
+
+  .categories-text-content > p {
+    font-size: 0.9em;
+  }
+}

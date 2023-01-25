@@ -1,0 +1,236 @@
+.banner-page {
+  min-width: 100vw;
+  position: relative;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-weight: 600;
+  margin: auto;
+}
+
+.banner-page .first-slider-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: left;
+}
+
+.banner-page .first-slider-page .left-part {
+  max-width: 41vw;
+  font-size: 1em;
+  padding-right: 15%;
+  font-family: Poppins, sans-serif;
+  line-height: 1.6em;
+}
+
+.banner-page .first-slider-page .left-part h1 {
+  font-size: 3.125em;
+  margin-bottom: 1em;
+  line-height: initial;
+}
+
+.banner-page-type2 {
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.banner-page-type2 .floater-type2-middle-part {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+  justify-content: center;
+}
+
+.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info {
+  background-color: white;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info h2 {
+  font-size: 2em;
+}
+.banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info p {
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+button {
+  cursor: pointer;
+}
+
+.banner-page-type2 .floater-type2-middle-part button {
+  border: 4px solid #fff;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.125em;
+  font-weight: 500;
+  letter-spacing: 0.11px;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  background-color: #383876;
+}
+.banner-page-type2 .floater-type2-middle-part button:hover {
+  background-color: #d94148;
+  border-color: #d94148;
+}
+
+.banner-page-type2 > p {
+  max-width: 30vw;
+  text-align: left;
+}
+
+.banner-page .last-slider-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-page .last-slider-page img {
+  width: 90vw;
+}
+
+/* responsive design for banner slider */
+@media only screen and (max-width: 1182px) {
+  .banner-page .first-slider-page .left-part {
+    max-width: 20em;
+  }
+  .banner-page .first-slider-page > img {
+    max-width: 32em;
+  }
+  .banner-page-type2 > img {
+    width: 16rem;
+  }
+  .banner-page .first-slider-page > img {
+    max-width: 40vw;
+  }
+  .banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info {
+    width: 16rem;
+    height: 16rem;
+  }
+  .banner-page-type2
+    .floater-type2-middle-part
+    .floater-middle-circle-info
+    > p {
+    word-wrap: normal;
+  }
+}
+
+@media only screen and (max-width: 994px) {
+  .banner-page .first-slider-page .left-part {
+    max-width: 15em;
+  }
+
+  .banner-page .first-slider-page .left-part > h1 {
+    margin-bottom: 0.2em;
+  }
+  .banner-page .first-slider-page > img {
+    max-width: 28em;
+  }
+  .banner-page-type2 > img {
+    width: 14rem;
+  }
+  .banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info {
+    width: 14rem;
+    height: 14rem;
+  }
+  .banner-page-type2
+    .floater-type2-middle-part
+    .floater-middle-circle-info
+    > p {
+    word-wrap: normal;
+  }
+  .banner-page-type2 > p {
+    max-width: 14em;
+    font-size: 0.9em;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .banner-page .first-slider-page .left-part {
+    min-width: 18em;
+  }
+  .banner-page .first-slider-page .left-part > h1 {
+    font-size: 2em;
+  }
+
+  .banner-page .first-slider-page .left-part > p {
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+
+  .banner-page-type2 {
+    justify-content: center;
+    gap: 2em;
+  }
+
+  .banner-page-type2 > p {
+    max-width: 16em;
+    font-size: 0.9em;
+    font-weight: 500;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .banner-page .first-slider-page .left-part {
+    min-width: 15em;
+  }
+
+  .banner-page .first-slider-page > img {
+    min-width: 16vw;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-page .first-slider-page {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .banner-page .first-slider-page > img {
+    max-width: 65vw;
+  }
+
+  .banner-page .first-slider-page .left-part {
+    margin: auto;
+    min-width: 60vw;
+    text-align: left;
+  }
+
+  .banner-page-type2 {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .banner-page-type2 > img {
+    display: none;
+  }
+  .banner-page-type2 .floater-type2-middle-part .floater-middle-circle-info {
+    width: 16rem;
+    height: 16rem;
+  }
+  .banner-page-type2 > p {
+    word-wrap: normal;
+    max-width: 80vw;
+  }
+}
