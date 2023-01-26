@@ -1,19 +1,18 @@
 import React from "react";
-// import DatamapsIndia from "react-datamaps-india";
-import "../../styles/IndiaMap.css";
+import "../../styles/IndiaMap.scss";
 
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 import highchartsMap from "highcharts/modules/map";
-import proj4 from "proj4";
+// import proj4 from "proj4";
 import mapDataIN from "@highcharts/map-collection/countries/in/custom/in-all-disputed.geo.json";
 
 highchartsMap(Highcharts);
 
 export default function IndiaMaps() {
-  if (typeof window !== "undefined") {
-    window.proj4 = window.proj4 || proj4;
-  }
+  // if (typeof window !== "undefined") {
+  //   window.proj4 = window.proj4 || proj4;
+  // }
   var data = [
     ["madhya pradesh", 1],
     ["uttar pradesh", 1],
@@ -615,8 +614,8 @@ export default function IndiaMaps() {
     chart: {
       map: "countries/in/custom/in-all-disputed",
       animation: true,
-      // pinchType: "none",
-      // zoomType: "none",
+      pinchType: "none",
+      zoomType: "none",
       width:
         document.body.offsetWidth > 1040
           ? 480
@@ -649,48 +648,48 @@ export default function IndiaMaps() {
       enabled: false,
     },
 
-    // tooltip: {
-    //   useHTML: true,
-    //   formatter() {
-    //     let point = this,
-    //       vals;
+    tooltip: {
+      useHTML: true,
+      formatter() {
+        let point = this,
+          vals;
 
-    //     data1.forEach((d) => {
-    //       if (d[0] == point.point["hc-key"]) {
-    //         vals = d[1];
-    //       }
-    //     });
-    //     return `
-    //     <b>${point.point["hc-key"]}</b><br/>
-    //     <table style="text-align:left;width:200px">
-    //     <tr>
-    //     <td><div id="box-color"></div><div><span>Daksh: </span><br><span>${vals.daksh} Districts</span></div></td>
-    //     <td><span>Utkarsh: </span><span>${vals.utkarsh} Districts</span></td>
-    //     </tr>
-    //     <tr>
-    //     <td><span>Ati-Uttam: </span><span>${vals.atiuttam} Districts</span></td>
-    //     <td><span>Uttam: </span><span>${vals.uttam} Districts</span></td>
-    //     </tr>
-    //     <tr>
-    //     <td><span>Prachesta-1: </span><span>${vals.prachesta1} Districts</span></td>
-    //     <td><span>Prachesta-2: </span><span>${vals.prachesta2} Districts</span></td>
-    //     </tr>
-    //     <tr>
-    //     <td><span>Prachesta-3: </span><span>${vals.prachesta3} Districts</span></td>
-    //     <td><span>Akanshi-1: </span><span>${vals.akanshi1} Districts</span></td>
-    //     </tr>
-    //     <tr>
-    //     <td><span>Akanshi-2: </span><span>${vals.akanshi2} Districts</span></td>
-    //     <td><span>Akanshi-3: </span><span>${vals.akanshi3} Districts</span></td>
-    //     </tr>
-    //     </table>`;
-    //   },
-    // },
+        data1.forEach((d) => {
+          if (d[0] == point.point["hc-key"]) {
+            vals = d[1];
+          }
+        });
+        return `
+        <b>${point.point["hc-key"]}</b><br/>
+        <table style="text-align:left;width:200px">
+        <tr>
+        <td><div id="box-color"></div><div><span>Daksh: </span><br><span>${vals.daksh} Districts</span></div></td>
+        <td><span>Utkarsh: </span><span>${vals.utkarsh} Districts</span></td>
+        </tr>
+        <tr>
+        <td><span>Ati-Uttam: </span><span>${vals.atiuttam} Districts</span></td>
+        <td><span>Uttam: </span><span>${vals.uttam} Districts</span></td>
+        </tr>
+        <tr>
+        <td><span>Prachesta-1: </span><span>${vals.prachesta1} Districts</span></td>
+        <td><span>Prachesta-2: </span><span>${vals.prachesta2} Districts</span></td>
+        </tr>
+        <tr>
+        <td><span>Prachesta-3: </span><span>${vals.prachesta3} Districts</span></td>
+        <td><span>Akanshi-1: </span><span>${vals.akanshi1} Districts</span></td>
+        </tr>
+        <tr>
+        <td><span>Akanshi-2: </span><span>${vals.akanshi2} Districts</span></td>
+        <td><span>Akanshi-3: </span><span>${vals.akanshi3} Districts</span></td>
+        </tr>
+        </table>`;
+      },
+    },
 
     series: [
       {
         mapData: mapDataIN,
-        data: data1,
+        data: data,
         type: "map",
         allAreas: false,
         showInLegend: false,
@@ -700,15 +699,7 @@ export default function IndiaMaps() {
         color: "#42FFF6",
         states: {
           hover: {
-            color: "blue",
-          },
-        },
-
-        tooltip: {
-          headerFormat: "",
-          pointFormatter() {
-            // console.log("testing");
-            return "";
+            color: "red",
           },
         },
       },
@@ -721,7 +712,6 @@ export default function IndiaMaps() {
         constructorType={"mapChart"}
         highcharts={Highcharts}
         options={mapOptions}
-        // id={"mapChart"}
       />
     </div>
   );

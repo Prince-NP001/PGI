@@ -13,3 +13,64 @@
   height: 40vmin;
   pointer-events: none;
 }
+
+button {
+  cursor: pointer;
+}
+select:focus {
+  border: 0;
+  outline: none;
+}
+.animateLeft {
+  animation-duration: 2s;
+  z-index: -1;
+  animation-name: animate_left;
+}
+@keyframes animate_left {
+  0% {
+    translate: -100px 0px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+.animateRight {
+  animation-duration: 2s;
+  z-index: -1;
+  animation-name: animate_right;
+}
+@keyframes animate_right {
+  0% {
+    translate: 100px 0px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+.animateTop {
+  animation-duration: 2s;
+  z-index: -1;
+  animation-name: animate_top;
+}
+@keyframes animate_top {
+  0% {
+    translate: 0px 100px;
+    opacity: 0;
+    z-index: -1;
+  }
+  100% {
+    transition: 0px 0px;
+    opacity: 1;
+    z-index: -1;
+  }
+}

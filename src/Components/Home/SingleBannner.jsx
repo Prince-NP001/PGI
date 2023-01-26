@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/Banner.css";
+import "../../styles/Banner.scss";
 import FloaterFirstImage from "../../images/Home/banner-img1.svg";
 import FloaterLastImage from "../../images/Home/banner-img8.png";
 import Floater2ndImage from "../../images/Home/banner-img2.png";
@@ -15,7 +15,7 @@ import Floater6thSvgImage from "../../images/Home/banner-img6-svg.svg";
 import Floater7thImage from "../../images/Home/banner-img7.png";
 import Floater7thSvgImage from "../../images/Home/banner-img7-svg.svg";
 
-export default function Bannner(props) {
+export default function SingleBannner(props) {
   return (
     <>
       {props.data.name == "first" || props.data.name == "last"

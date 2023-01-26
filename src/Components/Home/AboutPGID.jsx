@@ -1,11 +1,18 @@
 import React from "react";
+import { useInView } from "react-intersection-observer";
 import AboutPGI from "../../images/Home/about-pgi.gif";
-import "../../styles/Home.css";
+import "../../styles/Home.scss";
 
 export default function AboutPGID() {
+  const { ref: leftRef, inView: leftRefActive } = useInView();
+  const { ref: RightRef, inView: RightRefActive } = useInView();
+
   return (
     <>
-      <div className="left-about-section">
+      <div
+        className={`left-about-section  ${leftRefActive ? "animateLeft" : ""}`}
+        ref={leftRef}
+      >
         <h1 className="sections-heading">About PGI-D</h1>
         <p className="sections-para">
           The Performance Grading Index is a tool to provide insights on the
@@ -17,7 +24,12 @@ export default function AboutPGID() {
           I, at the same time which is a sign of fully developed nation.
         </p>
       </div>
-      <div className="right-about-section">
+      <div
+        className={`right-about-section ${
+          RightRefActive ? "animateRight" : ""
+        }`}
+        ref={RightRef}
+      >
         <img src={AboutPGI} alt="About PGI-D" />
       </div>
     </>
