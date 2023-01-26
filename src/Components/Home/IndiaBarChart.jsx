@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/IndiaMap.css";
+import "../../styles/IndiaMap.scss";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
 

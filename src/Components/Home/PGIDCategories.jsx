@@ -1,11 +1,19 @@
 import React from "react";
-import "../../styles/PGIDCategoriesStyling.css";
+import { useInView } from "react-intersection-observer";
+import "../../styles/PGIDCategoriesStyling.scss";
 import PGIDCards from "./PGIDCards";
 
 export default function PGIDCategories() {
+  const { ref: leftRef, inView: leftRefActive } = useInView();
+
   return (
     <div className="categories-and-card">
-      <div className="categories-text-content">
+      <div
+        className={`categories-text-content ${
+          leftRefActive ? "animateLeft" : ""
+        }`}
+        ref={leftRef}
+      >
         <h1 className="sections-heading">PGI-D Categories</h1>
         <p className="sections-para">
           The PGI-D scores are the aggregate score of 6 categories of
