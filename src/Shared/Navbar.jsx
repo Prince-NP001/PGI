@@ -22,20 +22,16 @@ import {
 } from "@mui/material";
 import React, { useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import logo from "../../images/Header_and_Footer/header_logo.png";
-import logo_right from "../../images/Header_and_Footer/logo.png";
-import "../../styles/component/Header.scss";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
+import logo from "../images/Header_and_Footer/header_logo.png";
+import logo_right from "../images/Header_and_Footer/logo.png";
+import "../styles/component/Header.scss";
+
 
 const Navbar = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
   const [currentOpenId, setCurrentOpenId] = useState(
     null
-    //   {
-    //   status_indux_head: false, reports_head: false, categories_head: false,main_menu:false
-    // }
   );
   const handleClose = () => {
     setAnchorEl(null);
@@ -47,30 +43,27 @@ const Navbar = () => {
       : setCurrentId(event.currentTarget.id);
     setAnchorEl(event.currentTarget);
   };
-  const handleOpen = (id) => {
-    id === currentOpenId ? setCurrentOpenId(null) : setCurrentOpenId(id);
-    // setCurrentOpenId(prev =>({...prev,[id]:!currentOpenId[id]}))
-  };
+
   return (
     <Box className="header_2" disableGutters color="inherit">
       <Container
-        maxWidth={"lg"}
+        maxWidth={"xl"}
         sx={{ backgroundColor: "white" }}
         disableGutters
       >
         <Grid container spacing={1} className="img">
-          <Grid item xs={12} md={3.5} textAlign={"center"}>
+          <Grid item xs={12} md={3} textAlign={"center"}>
             <Box
-              sx={{ maxWidth: "90%" }}
+              sx={{ maxWidth: "95%" }}
               component="img"
               alt="Your logo."
               src={logo}
             />
           </Grid>
-          <Grid item xs={12} md={6}></Grid>
+          <Grid item xs={12} md={6.5}></Grid>
           <Grid item xs={12} md={2.5} textAlign={"center"}>
             <Box
-              sx={{ maxWidth: "90%" }}
+              sx={{ maxWidth: "70%" }}
               component="img"
               alt="Your logo."
               src={logo_right}
@@ -79,7 +72,7 @@ const Navbar = () => {
         </Grid>
       </Container>
       <Divider className="divider" sx={{ margin: 0 }} />
-      <Container maxWidth={"lg"}>
+      <Container maxWidth={"xl"}>
         <Box disableGutters component="div" className="bottom_header">
           <ul>
             <li
@@ -122,9 +115,7 @@ const Navbar = () => {
               open={currentId === "state-index-menu" ? open : false}
               onClose={handleClose}
               size="large"
-              PaperProps={{
-                style: {},
-              }}
+              
             >
               <MenuItem
                 className="states_grid"

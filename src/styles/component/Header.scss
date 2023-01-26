@@ -9,21 +9,18 @@
   background: $primary-white;
   flex-direction: column;
   width: 100%;
-
 }
-.head{
+.head {
   display: flex;
   flex-direction: column;
- 
-  z-index: 1000 ;
-  position: relative;
-  
+
+  z-index: 1000;
 }
 .header {
   padding: 0;
   z-index: 1;
   background: $primary-purple;
-  width:100% !important;
+  width: 100% !important;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 2s ease-in-out;
 
@@ -36,7 +33,7 @@
       @include flexCenter;
 
       .btn_group {
-        @media screen and (min-width: 0) and (max-width: 1050px) {
+        @media screen and (min-width: 0) and (max-width: $medium) {
           display: none;
           z-index: -1;
         }
@@ -51,7 +48,7 @@
         border-top: $primary-black;
         width: 100%;
 
-        @media screen and (min-width: 1050px) {
+        @media screen and (min-width: $medium) {
           display: none;
           z-index: -1;
         }
@@ -65,14 +62,12 @@
     margin-top: 1.2rem;
     margin-bottom: 1rem;
     width: 90%;
-
   }
 
   .divider {
     background: rgba(78, 78, 78, 0);
     width: 100%;
   }
- 
 
   .css-13eg511-MuiButtonBase-root-MuiListItemButton-root {
     background-color: white;
@@ -85,28 +80,22 @@
 
 .header_2 {
   padding: 0;
- 
+
   background-color: white !important;
-  width:100%;
+  width: 100%;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 2s ease-in-out;
-    .MuiContainer-root{
-       background-color: inherit;
-    }
+  .MuiContainer-root {
+    background-color: inherit;
+  }
 
   .header-top {
     margin-top: 0px;
-    color: $primary-black ;
-   
+    color: $primary-black;
+
     .box {
       @include flexCenter;
-      width:"100%";
-      .btn_group {
-        @media screen and (min-width: 0) and (max-width: 1050px) {
-          display: none;
-          z-index: -1;
-        }
-      }
+      width: "100%";
 
       .link {
         @include flexCenter;
@@ -116,11 +105,6 @@
       .main-menu {
         border-top: $primary-black;
         width: 100%;
-
-        @media screen and (min-width: 1050px) {
-          display: none;
-          z-index: -1;
-        }
       }
     }
   }
@@ -130,7 +114,6 @@
     // flex-wrap: wrap;
     margin-top: 1.2rem;
     margin-bottom: 1rem;
-    width: 90%;
   }
 
   .divider {
@@ -141,31 +124,24 @@
   .bottom_header {
     color: $primary-black;
     z-index: -1;
- 
-    @media screen and (min-width: 0px) and (max-width: $medium) {
-      display: none;
-      z-index: -1;
-    }
 
     .text_btn {
       background-color: $primary-red;
     }
-    ul{
+    ul {
       display: flex;
-      flex-direction: row; 
+      flex-direction: row;
       justify-content: space-between;
       list-style-type: none;
       .btn {
         display: flex;
-        padding:1.5vh 1.2vh;
+        padding: 1.5vh 1.2vh;
         &:hover {
           background: $primary-red;
           color: white;
         }
       }
     }
-
-   
   }
 
   .MuiButtonBase-root-MuiListItemButton-root {
@@ -177,12 +153,11 @@
     padding-top: 0;
     padding-bottom: 0;
   }
- 
 }
 
 .MuiAppBar-root {
-  position: sticky!important;
-  top: 0!important;
+  position: sticky !important;
+  top: 0 !important;
 }
 
 .MuiContainer-root {
@@ -192,10 +167,33 @@
 .dropdown {
   position: absolute;
   top: 50px;
+  min-width: 100% !important;
   background-color: $primary-white;
   color: $primary-black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 1000;
+  z-index: 10000;
+
+  .status_indux_head {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: $primary-white;
+    padding: 5vw 5vw;
+    margin: 1.5vw 2vw;
+    .States_grid {
+      .states_list {
+        font-size: 0.9rem;
+        font-weight: 500;
+        list-style: disc;
+
+        li {
+          padding-bottom: 1.8vw;
+
+          &:hover {
+            color: $primary-red;
+          }
+        }
+      }
+    }
+  }
 
   .list_btn {
     height: 100%;
@@ -213,10 +211,10 @@
   }
 }
 .state-index-menu {
-  
- 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   .text_btn {
-    padding:5px 9px   !important;
+    padding: 5px 9px !important;
     &:hover {
       color: $primary-red;
     }
@@ -238,12 +236,24 @@
 
         &:hover {
           color: $primary-red;
-     
         }
       }
     }
   }
 }
-.nav_list{
-  
+
+@media screen and (min-width: 0) and (max-width: $medium) {
+  .bottom_header {
+    display: none;
+    z-index: -1;
+  }
+  .MuiAppBar-root {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+@media screen and (min-width: $medium) {
+  .main-menu-list {
+    display: none;
+  }
 }

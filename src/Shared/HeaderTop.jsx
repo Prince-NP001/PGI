@@ -21,13 +21,11 @@ import {
   Paper,
   Container,
 } from "@mui/material";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import "../../styles/component/Header.scss";
+
+import "../styles/component/Header.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { textAlign } from "@mui/system";
-import NavBottom from "./Navbar";
+
 import Modal from "./Modal";
 const arr = ["HOME", "ABOUT PGI-D"];
 const HeaderTop = () => {
@@ -35,9 +33,7 @@ const HeaderTop = () => {
   const [currentId, setCurrentId] = useState(null);
   const [currentOpenId, setCurrentOpenId] = useState(
     null
-    //   {
-    //   status_indux_head: false, reports_head: false, categories_head: false,main_menu:false
-    // }
+   
   );
   const [modalOpen, setModalOpen] = useState(false);
   const open = Boolean(anchorEl);
@@ -62,7 +58,7 @@ const HeaderTop = () => {
       disablePadding
       variant="dense"
     >
-      <Container maxWidth={"lg"}>
+      <Container maxWidth={"xl"}>
         <Box className="header-top" disablePadding>
           <Grid container className="box" disablePadding disableGutters>
             <Grid item disablePadding>
