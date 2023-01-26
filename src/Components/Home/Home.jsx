@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import "../../styles/Home.css";
+import React, { useEffect } from "react";
+import "../../styles/Home.scss";
 import IndiaMaps from "./IndiaMaps.jsx";
 import IndiaBarChart from "./IndiaBarChart.jsx";
 import BarChartIcon from "@mui/icons-material/BarChart";
@@ -10,6 +10,14 @@ import PGIDCategories from "./PGIDCategories.jsx";
 import Banner from "./Banner.jsx";
 
 export default function Home() {
+  useEffect(() => {
+    document.querySelector(".banner-slider").style.height =
+      "calc(" +
+      document.querySelector(".banner-page-type2").getBoundingClientRect()
+        .height +
+      "px + 6.6rem)";
+  }, []);
+
   const chart_and_graph_view = (e) => {
     e.currentTarget.style.backgroundColor = "#7e84a3";
     e.currentTarget.style.color = "white";
@@ -34,7 +42,7 @@ export default function Home() {
   };
 
   return (
-    <div className="main">
+    <>
       <section className="banner-slider">
         <Banner />
       </section>
@@ -87,7 +95,7 @@ export default function Home() {
       <section className="pgid-categories">
         <PGIDCategories />
       </section>
-    </div>
+    </>
   );
 }
 
