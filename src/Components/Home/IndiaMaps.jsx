@@ -10,9 +10,6 @@ import mapDataIN from "@highcharts/map-collection/countries/in/custom/in-all-dis
 highchartsMap(Highcharts);
 
 export default function IndiaMaps() {
-  // if (typeof window !== "undefined") {
-  //   window.proj4 = window.proj4 || proj4;
-  // }
   var data = [
     ["madhya pradesh", 1],
     ["uttar pradesh", 1],

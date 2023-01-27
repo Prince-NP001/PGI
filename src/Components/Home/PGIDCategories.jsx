@@ -4,7 +4,9 @@ import "../../styles/PGIDCategoriesStyling.scss";
 import PGIDCards from "./PGIDCards";
 
 export default function PGIDCategories() {
-  const { ref: leftRef, inView: leftRefActive } = useInView();
+  const { ref: leftRef, inView: leftRefActive } = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <div className="categories-and-card">
