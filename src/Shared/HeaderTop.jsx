@@ -1,24 +1,17 @@
 import React, { useEffect, useState } from "react";
 import {
-  AppBar,
   Button,
   Menu,
   MenuItem,
-  Toolbar,
   Divider,
-  Stack,
   Typography,
   Link,
   ButtonGroup,
-  IconButton,
   Grid,
   Box,
   List,
   ListItemButton,
   ListItemIcon,
-  Collapse,
-  ListItemText,
-  Paper,
   Container,
 } from "@mui/material";
 
@@ -31,10 +24,7 @@ const arr = ["HOME", "ABOUT PGI-D"];
 const HeaderTop = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
-  const [currentOpenId, setCurrentOpenId] = useState(
-    null
-   
-  );
+  const [currentOpenId, setCurrentOpenId] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -58,7 +48,7 @@ const HeaderTop = () => {
       disablePadding
       variant="dense"
     >
-      <Container maxWidth={"xl"}>
+      <Container maxWidth={"lg"}>
         <Box className="header-top" disablePadding>
           <Grid container className="box" disablePadding disableGutters>
             <Grid item disablePadding>
@@ -113,7 +103,7 @@ const HeaderTop = () => {
                     English
                   </Button>
                   <Menu
-                    className="menu"
+                    className="language-menu"
                     id="language-menu"
                     anchorEl={anchorEl}
                     open={currentId === "language-menu" ? open : false}
@@ -130,7 +120,7 @@ const HeaderTop = () => {
                 <List>
                   <ListItemButton
                     id="main_menu"
-                    className="main-menu"
+                    className="main-icon"
                     onClick={() => setModalOpen(!modalOpen)}
                   >
                     <ListItemIcon size="large" edge="start">

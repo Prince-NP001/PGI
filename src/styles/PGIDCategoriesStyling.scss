@@ -12,6 +12,7 @@
   padding: 20px;
   transition: background 0.3s ease;
   & > h2 {
+    
     -webkit-box-orient: vertical;
     color: #131523;
     font-size: 1.125em;
@@ -51,6 +52,7 @@
     }
   }
 }
+
 
 .categories-and-card {
   display: flex;
