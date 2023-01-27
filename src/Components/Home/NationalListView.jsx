@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/NationalListViews.css";
+import "../../styles/NationalListViews.scss";
 
 export default function NationalListView() {
   return (
