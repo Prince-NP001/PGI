@@ -2,7 +2,7 @@ import { Box, Container, Typography } from "@mui/material";
 
 import React from "react";
 import "../../styles/component/Footer.scss";
-import FooterMiddle from "../../Shared/FooterMiddle";
+import DataSource from "../../Shared/DataSource";
 import LinksFooter from "../../Shared/LinksFooter";
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
           <Box component="div">
             <Typography
               variant="h3"
-              sx={{ color: "#383876", textAlign: "center" }}
+              sx={{ color: "#383876", textAlign: "center", fontSize: "2.5em" }}
             >
               How it Works
             </Typography>
@@ -28,7 +28,7 @@ const Footer = () => {
             </Typography>
           </Box>
         </Box>
-        <FooterMiddle />
+        <DataSource />
       </Container>
       <LinksFooter />
     </Box>

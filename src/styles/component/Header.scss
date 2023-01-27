@@ -143,6 +143,7 @@
       }
       li{
         cursor: pointer;
+        user-select: none;
       }
     }
   }
@@ -225,23 +226,6 @@
 
   .text_item {
     text-align: left;
-  }
-
-  .states_grid {
-    .states_list {
-      font-size: 0.9rem;
-      font-weight: 500;
-      list-style: disc;
-      margin-left: 2%;
-      margin-top: 5%;
-      li {
-        padding-bottom: 1.5vw;
-
-        &:hover {
-          color: $primary-red;
-        }
-      }
-    }
   }
 }
 
