@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <Box className="footer">
       <Container maxWidth={"lg"}>
-        <Box component="div" className="footer_1">
+        <Box component="div" className="footer-top">
           <Box component="div">
             <Typography
               variant="h3"
