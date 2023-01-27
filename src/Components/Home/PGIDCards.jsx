@@ -16,7 +16,7 @@ export default function PGIDCards({ data }) {
       className={`pgid-card ${TopRefActive ? "animateTop" : ""}`}
       ref={TopRef}
     >
-      <Floater2ndSvgImage />
+      {/* <Floater2ndSvgImage /> */}
       {/* <img
         src={
           data.srno == 1
