@@ -11,17 +11,11 @@ import {
 import { Container } from "@mui/system";
 import React, { useState } from "react";
 import "../styles/component/Header.scss";
-const Modal = () => {
-  const [currentOpenId, setCurrentOpenId] = useState(
-    null
-    //   {
-    //   status_indux_head: false, reports_head: false, categories_head: false,main_menu:false
-    // }
-  );
+const MenuModal = () => {
+  const [currentOpenId, setCurrentOpenId] = useState(null);
 
   const handleOpen = (id) => {
     id === currentOpenId ? setCurrentOpenId(null) : setCurrentOpenId(id);
-    // setCurrentOpenId(prev =>({...prev,[id]:!currentOpenId[id]}))
   };
   return (
     <Container
@@ -50,7 +44,7 @@ const Modal = () => {
           )}
         </ListItemButton>
         <Collapse
-          in={currentOpenId == "status_indux_head"}
+          in={currentOpenId === "status_indux_head"}
           timeout="auto"
           unmountOnExit
         >
@@ -210,4 +204,4 @@ const Modal = () => {
   );
 };
 
-export default Modal;
+export default MenuModal;
