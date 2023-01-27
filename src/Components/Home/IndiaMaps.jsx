@@ -620,7 +620,7 @@ export default function IndiaMaps() {
           ? 380
           : document.body.offsetWidth < 900
           ? 480
-          : 300,
+          : 250,
       height:
         document.body.offsetWidth > 650
           ? 500
@@ -628,7 +628,7 @@ export default function IndiaMaps() {
           ? 400
           : document.body.offsetWidth < 900
           ? 500
-          : 320,
+          : 270,
     },
     accessibility: {
       description: "Showing India Detail",
