@@ -3,6 +3,11 @@ import SingleBanner from "./SingleBannner.jsx";
 
 export default function Banner() {
   const [Slider_position, setSlider_position] = useState(0);
+  const [Xmovement, setXmovement] = useState(0);
+  const [iniPos, setIniPos] = useState(0);
+
+  const [moveAndDown, setMoveAndDown] = useState(false);
+
   var slider_timeout;
   useEffect(() => {
     slider_timeout = setTimeout(() => {
@@ -11,29 +16,53 @@ export default function Banner() {
   }, [Slider_position]);
 
   const left_slider_push_button = () => {
+    window.clearTimeout(slider_timeout);
     if (Slider_position >= 0) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(0)";
     } else {
-      clearTimeout(slider_timeout);
+      setSlider_position(Slider_position + 100);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(calc(" + Slider_position + "vw + 100vw))";
-      setSlider_position(Slider_position + 100);
     }
   };
   const right_slider_push_button = (type = false) => {
-    if (type && Slider_position === -700) {
+    window.clearTimeout(slider_timeout);
+    if ((type && Slider_position === -700) || Slider_position === -700) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(0)";
     } else {
-      clearTimeout(slider_timeout);
+      setSlider_position(Slider_position - 100);
       document.querySelector(".home-banner-slider").style.transform =
         "translateX(calc(" + Slider_position + "vw - 100vw))";
-      setSlider_position(Slider_position - 100);
     }
   };
+
+  const HandlemouseDown = (e) => {
+    setIniPos(e.clientX);
+    document
+      .querySelector(".home-banner-slider")
+      .addEventListener("mousedown mousemove", () => {
+        setMoveAndDown(true);
+      });
+  };
+
+  const HandlemouseUp = (e) => {
+    if (iniPos === e.clientX) return;
+    setMoveAndDown(false);
+    setXmovement(iniPos - e.clientX);
+  };
+
+  useEffect(() => {
+    if (Xmovement > 0) {
+      right_slider_push_button();
+    } else if (Xmovement < 0) {
+      left_slider_push_button();
+    }
+  }, [Xmovement]);
+
   return (
     <>
       <button
@@ -43,7 +72,11 @@ export default function Banner() {
       >
         &larr;
       </button>
-      <div className="home-banner-slider">
+      <div
+        className="home-banner-slider"
+        onMouseDown={HandlemouseDown}
+        onMouseUp={HandlemouseUp}
+      >
         {data.map((e) => {
           return <SingleBanner key={e.id} index={e.id} data={e} />;
         })}
