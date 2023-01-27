@@ -30,8 +30,16 @@
         justify-content: center;
         align-items: center;
         gap: 16px;
+        & > div:first-child {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         & > div:first-child > button {
-          padding: 5px 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 10px;
           border: 1px solid #7e84a3;
           color: #7e84a3;
           background-color: white;

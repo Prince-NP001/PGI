@@ -1,14 +1,14 @@
 import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useRef } from "react";
+import React from "react";
 import { useInView } from "react-intersection-observer";
-import pic from "../../images/Header_and_Footer/Analytics1.png";
-import pic2 from "../../images/Header_and_Footer/Analytics2.png";
-const Footer_middle = () => {
-  const { ref: dataRef1, inView: inView1, entry } = useInView();
-  const { ref: imgRef1, inView: inView2, entry2 } = useInView();
-  const { ref: dataRef2, inView: inView3, entry3 } = useInView();
-  const { ref: imgRef2, inView: inView4, entry4 } = useInView();
+import pic from "../images/Header_and_Footer/Analytics1.png";
+import pic2 from "../images/Header_and_Footer/Analytics2.png";
+const FooterMiddle = () => {
+  const { ref: dataRef1, inView: inView1 } = useInView();
+  const { ref: imgRef1, inView: inView2 } = useInView();
+  const { ref: dataRef2, inView: inView3 } = useInView();
+  const { ref: imgRef2, inView: inView4 } = useInView();
 
   console.log(inView1);
   return (
@@ -42,7 +42,7 @@ const Footer_middle = () => {
         </Grid>
         <Grid
           item
-          sx={{ justifyContent: { xs: "center", md: "right" } }}
+          sx={{ textAlign: { xs: "center", lg: "right" } }}
           className={`${"img"} ${inView2 ? "animateRight" : ""}`}
           md={5.5}
           xs={12}
@@ -106,4 +106,4 @@ const Footer_middle = () => {
   );
 };
 
-export default Footer_middle;
+export default FooterMiddle;

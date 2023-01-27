@@ -61,6 +61,11 @@ export default function IndiaBarChart() {
         name: "PGI-District Grading",
         cursor: "pointer",
         data: data,
+        states: {
+          hover: {
+            backgroundColor: "red",
+          },
+        },
         tooltip: {
           headerFormat: "",
           pointFormat:

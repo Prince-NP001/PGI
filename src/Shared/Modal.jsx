@@ -10,31 +10,22 @@ import {
 } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
-import "../../styles/component/Header.scss";
+import "../styles/component/Header.scss";
 const Modal = () => {
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [currentId, setCurrentId] = useState(null);
   const [currentOpenId, setCurrentOpenId] = useState(
     null
     //   {
     //   status_indux_head: false, reports_head: false, categories_head: false,main_menu:false
     // }
   );
-  const [modalOpen, setModalOpen] = useState(true);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    event.currentTarget.id === currentId
-      ? setCurrentId(null)
-      : setCurrentId(event.currentTarget.id);
-    setAnchorEl(event.currentTarget);
-  };
+
   const handleOpen = (id) => {
     id === currentOpenId ? setCurrentOpenId(null) : setCurrentOpenId(id);
     // setCurrentOpenId(prev =>({...prev,[id]:!currentOpenId[id]}))
   };
   return (
     <Container
-      className="dropdown"
+      className="modal"
       maxWidth={"md"}
       sx={{ margin: "auto" }}
       disablePadding

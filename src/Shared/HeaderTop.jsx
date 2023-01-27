@@ -1,44 +1,30 @@
 import React, { useEffect, useState } from "react";
 import {
-  AppBar,
   Button,
   Menu,
   MenuItem,
-  Toolbar,
   Divider,
-  Stack,
   Typography,
   Link,
   ButtonGroup,
-  IconButton,
   Grid,
   Box,
   List,
   ListItemButton,
   ListItemIcon,
-  Collapse,
-  ListItemText,
-  Paper,
   Container,
 } from "@mui/material";
-import ExpandLess from "@mui/icons-material/ExpandLess";
-import ExpandMore from "@mui/icons-material/ExpandMore";
-import "../../styles/component/Header.scss";
+
+import "../styles/component/Header.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import { textAlign } from "@mui/system";
-import NavBottom from "./Navbar";
+
 import Modal from "./Modal";
 const arr = ["HOME", "ABOUT PGI-D"];
 const HeaderTop = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
-  const [currentOpenId, setCurrentOpenId] = useState(
-    null
-    //   {
-    //   status_indux_head: false, reports_head: false, categories_head: false,main_menu:false
-    // }
-  );
+  const [currentOpenId, setCurrentOpenId] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -117,7 +103,7 @@ const HeaderTop = () => {
                     English
                   </Button>
                   <Menu
-                    className="menu"
+                    className="language-menu"
                     id="language-menu"
                     anchorEl={anchorEl}
                     open={currentId === "language-menu" ? open : false}
@@ -134,7 +120,7 @@ const HeaderTop = () => {
                 <List>
                   <ListItemButton
                     id="main_menu"
-                    className="main-menu"
+                    className="main-icon"
                     onClick={() => setModalOpen(!modalOpen)}
                   >
                     <ListItemIcon size="large" edge="start">

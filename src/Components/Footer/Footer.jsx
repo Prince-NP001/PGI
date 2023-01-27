@@ -1,9 +1,9 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
-import { purple } from "@mui/material/colors";
+import { Box, Container, Typography } from "@mui/material";
+
 import React from "react";
 import "../../styles/component/Footer.scss";
-import Footer_middle from "./Footer_middle";
-import LinksFooter from "./LinksFooter";
+import FooterMiddle from "../../Shared/FooterMiddle";
+import LinksFooter from "../../Shared/LinksFooter";
 const Footer = () => {
   return (
     <Box className="footer">
@@ -28,7 +28,7 @@ const Footer = () => {
             </Typography>
           </Box>
         </Box>
-        <Footer_middle />
+        <FooterMiddle />
       </Container>
       <LinksFooter />
     </Box>

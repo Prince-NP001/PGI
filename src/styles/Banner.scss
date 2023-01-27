@@ -32,6 +32,7 @@
   }
   .home-banner-slider {
     position: absolute;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +47,7 @@
 //single banner pages design
 
 .banner-page {
+  user-select: none;
   min-width: 100vw;
   position: relative;
   left: 0;
@@ -81,6 +83,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+
     img {
       width: 90vw;
     }
