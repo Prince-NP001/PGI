@@ -32,6 +32,7 @@
   }
   .home-banner-slider {
     position: absolute;
+    padding-top: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,6 +82,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: auto;
+
     img {
       width: 90vw;
     }

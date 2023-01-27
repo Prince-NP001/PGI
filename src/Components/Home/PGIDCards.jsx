@@ -9,26 +9,15 @@ import Floater6thSvgImage from "../../images/Home/banner-img6-svg.svg";
 import Floater7thSvgImage from "../../images/Home/banner-img7-svg.svg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 export default function PGIDCards({ data }) {
-  const { ref: leftRef, inView: leftRefActive } = useInView();
-  const { ref: RightRef, inView: RightRefActive } = useInView();
   const { ref: TopRef, inView: TopRefActive } = useInView();
 
   return (
     <div
-      className={`pgid-card ${
-        leftRefActive && data.srno % 3 == 1
-          ? "animateLeft"
-          : RightRefActive && data.srno % 3 == 0
-          ? "animateRight"
-          : TopRefActive
-          ? "animateTop"
-          : ""
-      }`}
-      ref={
-        data.srno % 3 == 1 ? leftRef : data.srno % 3 == 0 ? RightRef : TopRef
-      }
+      className={`pgid-card ${TopRefActive ? "animateTop" : ""}`}
+      ref={TopRef}
     >
-      <img
+      <Floater2ndSvgImage />
+      {/* <img
         src={
           data.srno == 1
             ? Floater6thSvgImage
@@ -43,7 +32,7 @@ export default function PGIDCards({ data }) {
             : Floater3rdSvgImage
         }
         alt="Image"
-      />
+      /> */}
       <h2>{data.name}</h2>
       <p>{data.para}...</p>
       <span>
