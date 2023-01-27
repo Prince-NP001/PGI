@@ -2,12 +2,12 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { purple } from "@mui/material/colors";
 import React from "react";
 import "../../styles/component/Footer.scss";
-import Footer_middle from "./Footer_middle";
-import LinksFooter from "./LinksFooter";
+import Footer_middle from "../../Shared/Footer_middle";
+import LinksFooter from "../../Shared/LinksFooter";
 const Footer = () => {
   return (
     <Box className="footer">
-      <Container maxWidth={"lg"}>
+      <Container maxWidth={"xl"}>
         <Box component="div" className="footer_1">
           <Box component="div">
             <Typography

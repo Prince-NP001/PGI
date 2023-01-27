@@ -10,7 +10,7 @@ import {
 } from "@mui/material";
 import { Container } from "@mui/system";
 import React, { useState } from "react";
-import "../../styles/component/Header.scss";
+import "../styles/component/Header.scss";
 const Modal = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);

@@ -15,7 +15,6 @@
   flex-direction: column;
 
   z-index: 1000;
-  position: relative;
 }
 .header {
   padding: 0;
@@ -34,7 +33,7 @@
       @include flexCenter;
 
       .btn_group {
-        @media screen and (min-width: 0) and (max-width: 1050px) {
+        @media screen and (min-width: 0) and (max-width: $medium) {
           display: none;
           z-index: -1;
         }
@@ -49,7 +48,7 @@
         border-top: $primary-black;
         width: 100%;
 
-        @media screen and (min-width: 1050px) {
+        @media screen and (min-width: $medium) {
           display: none;
           z-index: -1;
         }
@@ -97,12 +96,6 @@
     .box {
       @include flexCenter;
       width: "100%";
-      .btn_group {
-        @media screen and (min-width: 0) and (max-width: 1050px) {
-          display: none;
-          z-index: -1;
-        }
-      }
 
       .link {
         @include flexCenter;
@@ -112,11 +105,6 @@
       .main-menu {
         border-top: $primary-black;
         width: 100%;
-
-        @media screen and (min-width: 1050px) {
-          display: none;
-          z-index: -1;
-        }
       }
     }
   }
@@ -126,7 +114,6 @@
     // flex-wrap: wrap;
     margin-top: 1.2rem;
     margin-bottom: 1rem;
-    width: 90%;
   }
 
   .divider {
@@ -137,11 +124,6 @@
   .bottom_header {
     color: $primary-black;
     z-index: -1;
-
-    @media screen and (min-width: 0px) and (max-width: $medium) {
-      display: none;
-      z-index: -1;
-    }
 
     .text_btn {
       background-color: $primary-red;
@@ -185,10 +167,33 @@
 .dropdown {
   position: absolute;
   top: 50px;
+  min-width: 100% !important;
   background-color: $primary-white;
   color: $primary-black;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  z-index: 1000;
+  z-index: 10000;
+
+  .status_indux_head {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: $primary-white;
+    padding: 5vw 5vw;
+    margin: 1.5vw 2vw;
+    .States_grid {
+      .states_list {
+        font-size: 0.9rem;
+        font-weight: 500;
+        list-style: disc;
+
+        li {
+          padding-bottom: 1.8vw;
+
+          &:hover {
+            color: $primary-red;
+          }
+        }
+      }
+    }
+  }
 
   .list_btn {
     height: 100%;
@@ -206,6 +211,8 @@
   }
 }
 .state-index-menu {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
   .text_btn {
     padding: 5px 9px !important;
     &:hover {
@@ -234,5 +241,19 @@
     }
   }
 }
-.nav_list {
+
+@media screen and (min-width: 0) and (max-width: $medium) {
+  .bottom_header {
+    display: none;
+    z-index: -1;
+  }
+  .MuiAppBar-root {
+    position: relative !important;
+    top: 0 !important;
+  }
+}
+@media screen and (min-width: $medium) {
+  .main-menu-list {
+    display: none;
+  }
 }
