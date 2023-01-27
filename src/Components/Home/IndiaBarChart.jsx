@@ -7,8 +7,18 @@ export default function IndiaBarChart() {
   const options = {
     chart: {
       type: "column",
-      width: document.body.offsetWidth > 650 ? 515 : 300,
-      height: document.body.offsetWidth > 650 ? 550 : 320,
+      width:
+        document.body.offsetWidth > 650
+          ? 515
+          : document.body.offsetWidth > 300
+          ? 300
+          : 240,
+      height:
+        document.body.offsetWidth > 650
+          ? 550
+          : document.body.offsetWidth > 300
+          ? 320
+          : 260,
       animation: true,
     },
     accessibility: {
@@ -49,7 +59,7 @@ export default function IndiaBarChart() {
     plotOptions: {
       series: {
         borderWidth: 2,
-        pointWidth: 25,
+        pointWidth: document.body.offsetWidth > 300 ? 25 : 15,
         dataLabels: {
           enabled: false,
         },

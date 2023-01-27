@@ -618,17 +618,33 @@ export default function IndiaMaps() {
           ? 480
           : document.body.offsetWidth > 950
           ? 380
-          : document.body.offsetWidth < 900
+          : document.body.offsetWidth > 900
+          ? 330
+          : document.body.offsetWidth > 600
+          ? 500
+          : document.body.offsetWidth > 516
           ? 480
-          : 250,
+          : document.body.offsetWidth > 440
+          ? 400
+          : document.body.offsetWidth > 335
+          ? 320
+          : 260,
       height:
         document.body.offsetWidth > 650
           ? 500
           : document.body.offsetWidth > 950
           ? 400
-          : document.body.offsetWidth < 900
+          : document.body.offsetWidth > 900
+          ? 350
+          : document.body.offsetWidth > 600
+          ? 520
+          : document.body.offsetWidth > 516
           ? 500
-          : 270,
+          : document.body.offsetWidth > 440
+          ? 420
+          : document.body.offsetWidth > 335
+          ? 340
+          : 280,
     },
     accessibility: {
       description: "Showing India Detail",
