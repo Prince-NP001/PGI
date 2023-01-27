@@ -7,8 +7,8 @@ const LinksFooter = () => {
   return (
     <>
       <Box className="linksfooter">
-        <Container maxWidth={"xl"}>
-          <Grid justifyContent={"center"} container columns={16} spacing={4}  >
+        <Container maxWidth={"lg"}>
+          <Grid justifyContent={"center"} container columns={16} spacing={4}>
             <Grid item xs={12} md={4} paddingTop={3}>
               <Typography className="link" paddingLeft={2} variant="h2">
                 Links
@@ -67,7 +67,7 @@ const LinksFooter = () => {
       <Box className="footer_bottom">
         {" "}
         <Container maxWidth={"xl"} disableGutters>
-          <Grid container justifyContent={"space-evenly"}  >
+          <Grid container justifyContent={"space-evenly"}>
             <Grid item md={8}>
               <Typography
                 gutterBottom
