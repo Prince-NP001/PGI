@@ -10,9 +10,6 @@ import mapDataIN from "@highcharts/map-collection/countries/in/custom/in-all-dis
 highchartsMap(Highcharts);
 
 export default function IndiaMaps() {
-  // if (typeof window !== "undefined") {
-  //   window.proj4 = window.proj4 || proj4;
-  // }
   var data = [
     ["madhya pradesh", 1],
     ["uttar pradesh", 1],
@@ -621,17 +618,33 @@ export default function IndiaMaps() {
           ? 480
           : document.body.offsetWidth > 950
           ? 380
-          : document.body.offsetWidth < 900
+          : document.body.offsetWidth > 900
+          ? 330
+          : document.body.offsetWidth > 600
+          ? 500
+          : document.body.offsetWidth > 516
           ? 480
-          : 300,
+          : document.body.offsetWidth > 440
+          ? 400
+          : document.body.offsetWidth > 335
+          ? 320
+          : 260,
       height:
         document.body.offsetWidth > 650
           ? 500
           : document.body.offsetWidth > 950
           ? 400
-          : document.body.offsetWidth < 900
+          : document.body.offsetWidth > 900
+          ? 350
+          : document.body.offsetWidth > 600
+          ? 520
+          : document.body.offsetWidth > 516
           ? 500
-          : 320,
+          : document.body.offsetWidth > 440
+          ? 420
+          : document.body.offsetWidth > 335
+          ? 340
+          : 280,
     },
     accessibility: {
       description: "Showing India Detail",
@@ -660,28 +673,29 @@ export default function IndiaMaps() {
           }
         });
         return `
-        <b>${point.point["hc-key"]}</b><br/>
-        <table style="text-align:left;width:200px">
-        <tr>
-        <td><div id="box-color"></div><div><span>Daksh: </span><br><span>${vals.daksh} Districts</span></div></td>
-        <td><span>Utkarsh: </span><span>${vals.utkarsh} Districts</span></td>
-        </tr>
-        <tr>
-        <td><span>Ati-Uttam: </span><span>${vals.atiuttam} Districts</span></td>
-        <td><span>Uttam: </span><span>${vals.uttam} Districts</span></td>
-        </tr>
-        <tr>
-        <td><span>Prachesta-1: </span><span>${vals.prachesta1} Districts</span></td>
-        <td><span>Prachesta-2: </span><span>${vals.prachesta2} Districts</span></td>
-        </tr>
-        <tr>
-        <td><span>Prachesta-3: </span><span>${vals.prachesta3} Districts</span></td>
-        <td><span>Akanshi-1: </span><span>${vals.akanshi1} Districts</span></td>
-        </tr>
-        <tr>
-        <td><span>Akanshi-2: </span><span>${vals.akanshi2} Districts</span></td>
-        <td><span>Akanshi-3: </span><span>${vals.akanshi3} Districts</span></td>
-        </tr>
+        <h4 class="map-hover-title">${point.point["hc-key"]}</h4>
+        <hr class="line-break-line">
+        <table id="india-map-hover-effect">
+          <tr>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box1"></div><span class="td-title">Daksh</span></div><div class="table-td-spans"><span><b>${vals.daksh}</b> Districts</span></div></td>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box2"></div><span class="td-title">Utkarsh</span></div><div class="table-td-spans"><span><b>${vals.utkarsh}</b> Districts</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box3"></div><span class="td-title">Ati-Uttam</span></div><div class="table-td-spans"><span><b>${vals.atiuttam}</b> Districts</span></div></td>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box4"></div><span class="td-title">Uttam</span></div><div class="table-td-spans"><span><b>${vals.uttam}</b> Districts</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box5"></div><span class="td-title">Prachesta-1</span></div><div class="table-td-spans"><span><b>${vals.prachesta1}</b> Districts</span></div></td>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box6"></div><span class="td-title">Prachesta-2</span></div><div class="table-td-spans"><span><b>${vals.prachesta2}</b> Districts</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box7"></div><span class="td-title">Prachesta-3</span></div><div class="table-td-spans"><span><b>${vals.prachesta3}</b> Districts</span></div></td>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box8"></div><span class="td-title">Akanshi-1</span></div><div class="table-td-spans"><span><b>${vals.akanshi1}</b> Districts</span></div></td>
+          </tr>
+          <tr>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box9"></div><span class="td-title">Akanshi-2</span></div><div class="table-td-spans"><span><b>${vals.akanshi2}</b> Districts</span></div></td>
+            <td><div class="td-name-main-div"><div class="color-box" id="color-box10"></div><span class="td-title">Akanshi-3</span></div><div class="table-td-spans"><span><b>${vals.akanshi3}</b> Districts</span></div></td>
+          </tr>
         </table>`;
       },
     },
@@ -699,7 +713,7 @@ export default function IndiaMaps() {
         color: "#42FFF6",
         states: {
           hover: {
-            color: "red",
+            color: "blue",
           },
         },
       },

@@ -39,14 +39,22 @@ function floaterFirst(data) {
         <h1>{data.middlePara}</h1>
         <p>{data.rightText}</p>
       </div>
-      <img src={FloaterFirstImage} alt="Analyzing Data via PGI Tool" />
+      <img
+        src={FloaterFirstImage}
+        alt="Analyzing Data via PGI Tool"
+        draggable={false}
+      />
     </div>
   );
 }
 function floaterLast() {
   return (
     <div className="last-slider-page">
-      <img src={FloaterLastImage} alt="District PGI Grading" />
+      <img
+        src={FloaterLastImage}
+        alt="District PGI Grading"
+        draggable={false}
+      />
     </div>
   );
 }
@@ -69,6 +77,7 @@ function BannnerType2(index, data) {
             : Floater7thImage
         }
         alt=""
+        draggable={false}
       />
       <div className="floater-type2-middle-part">
         <div className="floater-middle-circle-info">
@@ -86,6 +95,7 @@ function BannnerType2(index, data) {
                 ? Floater6thSvgImage
                 : Floater7thSvgImage
             }
+            draggable={false}
             alt=""
           />
           <h2>{data.name}</h2>

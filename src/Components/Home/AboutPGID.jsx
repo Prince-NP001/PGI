@@ -4,8 +4,12 @@ import AboutPGI from "../../images/Home/about-pgi.gif";
 import "../../styles/Home.scss";
 
 export default function AboutPGID() {
-  const { ref: leftRef, inView: leftRefActive } = useInView();
-  const { ref: RightRef, inView: RightRefActive } = useInView();
+  const { ref: leftRef, inView: leftRefActive } = useInView({
+    triggerOnce: true,
+  });
+  const { ref: RightRef, inView: RightRefActive } = useInView({
+    triggerOnce: true,
+  });
 
   return (
     <>
