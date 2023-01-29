@@ -8,6 +8,7 @@ import NationalListView from "./NationalListView.jsx";
 import AboutPGID from "./AboutPGID.jsx";
 import PGIDCategories from "./PGIDCategories.jsx";
 import Banner from "./Banner.jsx";
+import NumOfDistricts from "../../Shared/NumOfDistricts";
 
 export default function Home() {
   useEffect(() => {
@@ -89,6 +90,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <NumOfDistricts/>
       <section className="about-pgid">
         <AboutPGID />
       </section>
