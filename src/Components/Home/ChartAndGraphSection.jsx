@@ -42,6 +42,7 @@ export default function ChartAndGraphSection() {
           <Box className="charts-and-graph" id="national-charts-and-graph">
             <Box className="map-and-chart-bundle">
               <IndiaMaps />
+              <hr />
               <IndiaBarChart />
             </Box>
             <Box className="map-color-bar">
@@ -49,7 +50,6 @@ export default function ChartAndGraphSection() {
                 return <MapColorBar key={el.id} data={el} />;
               })}
             </Box>
-            )
           </Box>
         ) : (
           <Box

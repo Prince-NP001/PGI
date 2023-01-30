@@ -28,7 +28,7 @@ export default function SectionHeader(props) {
             <FormatListBulletedIcon />
           </Button>
         </Box>
-        <FormControl fullWidth>
+        <FormControl>
           <Select
             name="show-month-wise"
             value={selectValue}
