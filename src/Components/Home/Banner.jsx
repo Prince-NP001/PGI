@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SingleBanner from "./SingleBannner.jsx";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function Banner() {
   const [Slider_position, setSlider_position] = useState(0);
@@ -65,14 +66,14 @@ export default function Banner() {
 
   return (
     <>
-      <button
+      <Button
         disabled={Slider_position === 0}
         onClick={left_slider_push_button}
         className="slider-push-button"
       >
         &larr;
-      </button>
-      <div
+      </Button>
+      <Box
         className="home-banner-slider"
         onMouseDown={HandlemouseDown}
         onMouseUp={HandlemouseUp}
@@ -80,14 +81,14 @@ export default function Banner() {
         {data.map((e) => {
           return <SingleBanner key={e.id} index={e.id} data={e} />;
         })}
-      </div>
-      <button
+      </Box>
+      <Button
         disabled={Slider_position === -700}
         onClick={right_slider_push_button}
         className="slider-push-button"
       >
         &rarr;
-      </button>
+      </Button>
     </>
   );
 }

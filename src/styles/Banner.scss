@@ -1,11 +1,12 @@
 .slider-push-button {
-  padding: 0.9em 1.2em;
+  padding: 0.9em 1.2em !important;
   z-index: 10;
   cursor: pointer;
-  background-color: #afb7dc;
+  background-color: #afb7dc !important;
   border: none;
+  border-radius: 0 !important;
   &:hover {
-    background-color: #383876;
+    background-color: #383876 !important;
   }
 }
 

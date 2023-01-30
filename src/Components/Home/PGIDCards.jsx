@@ -8,13 +8,15 @@ import { ReactComponent as Floater5thSvgImage } from "../../images/Home/banner-i
 import { ReactComponent as Floater6thSvgImage } from "../../images/Home/banner-img6-svg.svg";
 import { ReactComponent as Floater7thSvgImage } from "../../images/Home/banner-img7-svg.svg";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import { Box, Typography } from "@mui/material";
+
 export default function PGIDCards({ data }) {
   const { ref: TopRef, inView: TopRefActive } = useInView({
     triggerOnce: true,
   });
 
   return (
-    <div
+    <Box
       className={`pgid-card ${TopRefActive ? "animateTop" : ""}`}
       ref={TopRef}
     >
@@ -31,11 +33,11 @@ export default function PGIDCards({ data }) {
       ) : (
         <Floater3rdSvgImage />
       )}
-      <h2>{data.name}</h2>
-      <p>{data.para}...</p>
-      <span>
+      <Typography component={"h2"}>{data.name}</Typography>
+      <Typography component={"p"}>{data.para}...</Typography>
+      <Typography component={"span"}>
         More Insights <ChevronRightIcon className="right-icon" />
-      </span>
-    </div>
+      </Typography>
+    </Box>
   );
 }

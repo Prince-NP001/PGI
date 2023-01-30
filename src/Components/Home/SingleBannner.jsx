@@ -14,6 +14,7 @@ import Floater6thImage from "../../images/Home/banner-img6.png";
 import Floater6thSvgImage from "../../images/Home/banner-img6-svg.svg";
 import Floater7thImage from "../../images/Home/banner-img7.png";
 import Floater7thSvgImage from "../../images/Home/banner-img7-svg.svg";
+import { Box, Button, Typography } from "@mui/material";
 
 export default function SingleBannner(props) {
   return (
@@ -26,42 +27,42 @@ export default function SingleBannner(props) {
 }
 function BannnerType1(data) {
   return (
-    <div className="banner-page">
+    <Box className="banner-page">
       {data.name == "first" ? floaterFirst(data) : floaterLast()}
-    </div>
+    </Box>
   );
 }
 
 function floaterFirst(data) {
   return (
-    <div className="first-slider-page">
-      <div className="left-part">
-        <h1>{data.middlePara}</h1>
-        <p>{data.rightText}</p>
-      </div>
+    <Box className="first-slider-page">
+      <Box className="left-part">
+        <Typography component={"h1"}>{data.middlePara}</Typography>
+        <Typography component={"p"}>{data.rightText}</Typography>
+      </Box>
       <img
         src={FloaterFirstImage}
         alt="Analyzing Data via PGI Tool"
         draggable={false}
       />
-    </div>
+    </Box>
   );
 }
 function floaterLast() {
   return (
-    <div className="last-slider-page">
+    <Box className="last-slider-page">
       <img
         src={FloaterLastImage}
         alt="District PGI Grading"
         draggable={false}
       />
-    </div>
+    </Box>
   );
 }
 
 function BannnerType2(index, data) {
   return (
-    <div className="banner-page banner-page-type2">
+    <Box className="banner-page banner-page-type2">
       <img
         src={
           index == 2
@@ -79,8 +80,8 @@ function BannnerType2(index, data) {
         alt=""
         draggable={false}
       />
-      <div className="floater-type2-middle-part">
-        <div className="floater-middle-circle-info">
+      <Box className="floater-type2-middle-part">
+        <Box className="floater-middle-circle-info">
           <img
             src={
               index == 2
@@ -98,13 +99,13 @@ function BannnerType2(index, data) {
             draggable={false}
             alt=""
           />
-          <h2>{data.name}</h2>
-          <p>{data.middlePara}</p>
-        </div>
-        <button className="floater-know-more-button">KNOW MORE</button>
-      </div>
+          <Typography component={"h2"}>{data.name}</Typography>
+          <Typography component={"p"}>{data.middlePara}</Typography>
+        </Box>
+        <Button className="floater-know-more-button">KNOW MORE</Button>
+      </Box>
 
-      <p>{data.rightText}</p>
-    </div>
+      <Typography component={"p"}>{data.rightText}</Typography>
+    </Box>
   );
 }

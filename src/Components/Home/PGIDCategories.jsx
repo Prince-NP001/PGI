@@ -2,6 +2,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import "../../styles/PGIDCategoriesStyling.scss";
 import PGIDCards from "./PGIDCards";
+import { Box, Typography } from "@mui/material";
 
 export default function PGIDCategories() {
   const { ref: leftRef, inView: leftRefActive } = useInView({
@@ -9,15 +10,17 @@ export default function PGIDCategories() {
   });
 
   return (
-    <div className="categories-and-card">
-      <div
+    <Box className="categories-and-card">
+      <Box
         className={`categories-text-content ${
           leftRefActive ? "animateLeft" : ""
         }`}
         ref={leftRef}
       >
-        <h1 className="sections-heading">PGI-D Categories</h1>
-        <p className="sections-para">
+        <Typography component={"h1"} className="sections-heading">
+          PGI-D Categories
+        </Typography>
+        <Typography component={"p"} className="sections-para">
           The PGI-D scores are the aggregate score of 6 categories of
           educational attainment of districts viz., Outcomes, Effective
           Classroom Interactions, Infrastructure Facilities & Student’s
@@ -25,14 +28,14 @@ export default function PGIDCategories() {
           Governance Process. The category-wise analysis brings out areas of
           good practices and weak links among districts providing insights into
           future action plan.
-        </p>
-      </div>
-      <div className="cards-section">
+        </Typography>
+      </Box>
+      <Box className="cards-section">
         {data.map((el) => {
           return <PGIDCards key={el.srno} data={el} />;
         })}
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
 
