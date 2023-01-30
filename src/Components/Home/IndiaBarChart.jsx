@@ -2,6 +2,7 @@ import React from "react";
 import "../../styles/IndiaMap.scss";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { Box } from "@mui/material";
 
 export default function IndiaBarChart() {
   const options = {
@@ -20,7 +21,6 @@ export default function IndiaBarChart() {
           ? 320
           : 260,
       animation: true,
-      crosshair: true,
     },
     accessibility: {
       description: "Showing India Detail in bar",
@@ -44,6 +44,9 @@ export default function IndiaBarChart() {
         "Akanshi-2",
         "Akanshi-3",
       ],
+      crosshair: {
+        color: "rgba(0, 0, 255, 0.1)",
+      },
     },
     credits: {
       enabled: false,
@@ -72,11 +75,7 @@ export default function IndiaBarChart() {
         name: "PGI-District Grading",
         cursor: "pointer",
         data: data,
-        states: {
-          hover: {
-            backgroundColor: "red",
-          },
-        },
+
         tooltip: {
           headerFormat: "",
           pointFormat:
@@ -87,9 +86,9 @@ export default function IndiaBarChart() {
   };
 
   return (
-    <div className="bar-chart-india">
+    <Box className="bar-chart-india">
       <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
+    </Box>
   );
 }
 

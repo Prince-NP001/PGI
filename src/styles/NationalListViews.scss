@@ -19,19 +19,28 @@
 }
 
 .list-view-table {
-  width: 100%;
   margin: 0 auto;
   max-height: 200px;
   overflow-y: scroll;
   font-size: 0.75em;
   font-weight: 700;
-  border-collapse: collapse;
+  border-collapse: collapse !important;
   border-spacing: 0;
   td,
   th {
     text-align: left;
     padding: 8px;
-    border: 2px solid #d7dbec;
+    border: 1px solid #d7dbec;
+  }
+  tr > th:not(:nth-child(1)) {
+    border: 0px;
+  }
+
+  th:nth-child(1) {
+    min-width: 16vw;
+  }
+  tr:nth-child(even) {
+    background-color: #dddddd;
   }
   th:nth-child(n + 2),
   td:nth-child(n + 2) {
@@ -40,8 +49,10 @@
   th:nth-child(n + 2) {
     min-width: 70px;
     height: 70px;
-    background-color: #0000ff;
     color: white;
+  }
+  th:nth-child(2) {
+    background-color: #0000ff;
   }
   th:nth-child(3) {
     background-color: #5050ff;
@@ -69,11 +80,5 @@
   }
   th:nth-child(11) {
     background-color: #fa4b4b;
-  }
-  th:nth-child(1) {
-    min-width: 16vw;
-  }
-  tr:nth-child(even) {
-    background-color: #dddddd;
   }
 }
