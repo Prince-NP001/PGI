@@ -77,7 +77,6 @@ const DistrictsBarChart = () => {
       shared: true,
       useHTML: true,
     },
-    colors: ["rgb(56, 56, 118)", "rgb(217, 65, 72)"],
 
     plotOptions: {
       series: {

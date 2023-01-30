@@ -4,23 +4,13 @@ import Highcharts from "highcharts";
 
 const DistrictLineChart = () => {
   const options = {
-    yAxis: {},
+    yAxis: {
+      title: {
+        text: "",
+      },
+    },
 
     xAxis: {
-      // accessibility: {
-      //   rangeDescription: [
-      //     "Daksh",
-      //     "Utkarsh",
-      //     "Ati-Uttam",
-      //     "Uttam",
-      //     "Prachesta-1",
-      //     "Prachesta-2",
-      //     "Prachesta-3",
-      //     "Akanshi-1",
-      //     "Akanshi-2",
-      //     "Akanshi-3",
-      //   ],
-      // },
       categories: [
         "Daksh",
         "Utkarsh",
@@ -36,43 +26,46 @@ const DistrictLineChart = () => {
       crosshair: true,
     },
 
-    legend: {
-      layout: "vertical",
-      align: "right",
-      verticalAlign: "middle",
+    tooltip: {
+      headerFormat: '<span style="font-size:10px">{point.key}</span>',
+      pointFormat: `<table>
+      <tr>
+      <td style='color:{series.color}; padding:0}">{series.name}: </td>
+      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      </tr>
+      <tr>
+      <td style='color:{series.color}; padding:0}">{series.name}: </td>
+      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      </tr>
+      </table>
+       `,
+
+      shared: true,
+      useHTML: true,
+    },
+    credits: false,
+    title: {
+      text: "",
     },
 
     plotOptions: {
       series: {
-        label: {
-          // connectorAllowed: false
+        animation: {
+          duration: 2000,
         },
       },
     },
 
     series: [
       {
-        name: "Operations & Maintenance",
-        data: [
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          null,
-          11164,
-          11218,
-          10077,
-        ],
+        name: "2020-21",
+        data: [0, 4, 149, 258, 213, 77, 21, 6, 12, 1],
+        color: "rgb(56, 56, 118)",
       },
       {
-        name: "Other",
-        data: [
-          21908, 5548, 8105, 11248, 8989, 11816, 18274, 17300, 13053, 11906,
-          10073,
-        ],
+        name: "2019-20",
+        data: [0, 3, 85, 274, 241, 86, 40, 3, 1, 0],
+        color: "rgb(217, 65, 72)",
       },
     ],
 
@@ -84,9 +77,8 @@ const DistrictLineChart = () => {
           },
           chartOptions: {
             legend: {
-              layout: "horizontal",
-              align: "center",
-              verticalAlign: "bottom",
+              verticalAlign: "top",
+              y: 12,
             },
           },
         },
@@ -94,11 +86,7 @@ const DistrictLineChart = () => {
     },
   };
 
-  return (
-    <div className="highcharts-figure">
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
-  );
+  return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
 export default DistrictLineChart;

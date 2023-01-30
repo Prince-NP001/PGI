@@ -8,21 +8,23 @@ import "../styles/Home.scss";
 import DistrictsBarChart from "./DistrictsBarChart";
 import DistrictLineChart from "./DistrictLineChart";
 import { Box, Container } from "@mui/material";
+import SectionHeader from "../Components/Home/SectionHeader";
 
 const NumOfDistricts = () => {
   return (
     <Box className="chart-graph">
       <Box className="chart-graph-content">
+        <SectionHeader title="Number of Districts in Different Grades of PGI-District (National)" />
         <Container>
           <div className="charts-district" id="national-district-bar-chart">
-            <DistrictsBarChart />
+            <DistrictLineChart />
           </div>
           <div
             className="charts-and-graph-list-view"
             id="national-district-line-chart"
             style={{ display: "none" }}
           >
-            <DistrictLineChart />
+            <DistrictsBarChart />
           </div>
         </Container>
       </Box>
