@@ -6,6 +6,7 @@ import PGIDCategories from "./PGIDCategories.jsx";
 import Banner from "./Banner.jsx";
 import { Box, Typography } from "@mui/material";
 import ChartAndGraphSection from "./ChartAndGraphSection";
+import NumOfDistricts from "../../Shared/NumOfDistricts";
 
 export default function Home() {
   useEffect(() => {
@@ -24,6 +25,9 @@ export default function Home() {
       <Typography component={"section"} className="chart-graph">
         <ChartAndGraphSection />
       </Typography>
+
+      <NumOfDistricts />
+
       <Typography component={"section"} className="about-pgid">
         <AboutPGID />
       </Typography>

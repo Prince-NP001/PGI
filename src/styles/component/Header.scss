@@ -6,6 +6,8 @@
 }
 
 .header-bottom {
+  display: flex;
+  color: $primary-black;
   background: $primary-white;
   flex-direction: column;
   width: 100%;
@@ -13,7 +15,6 @@
 .head {
   display: flex;
   flex-direction: column;
-  
   z-index: 1000;
 }
 .header {
@@ -32,7 +33,7 @@
     .box {
       @include flexCenter;
 
-      .btn_group {
+      .btn-group {
         @media screen and (min-width: 0) and (max-width: $medium) {
           display: none;
           z-index: -1;
@@ -121,11 +122,11 @@
     width: 100%;
   }
 
-  .bottom_header {
+  .bottom-header {
     color: $primary-black;
     z-index: -1;
 
-    .text_btn {
+    .text-btn {
       background-color: $primary-red;
     }
     ul {
@@ -177,13 +178,13 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   z-index: 10000;
 
-  .status_indux_head {
+  .status-indux-head {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: $primary-white;
     padding: 5vw 5vw;
     margin: 1.5vw 2vw;
-    .States_grid {
-      .states_list {
+    .States-grid {
+      .states-list {
         font-size: 0.9rem;
         font-weight: 500;
         list-style: disc;
@@ -199,7 +200,7 @@
     }
   }
 
-  .list_btn {
+  .list-btn {
     height: 100%;
     width: 100%;
 
@@ -217,20 +218,20 @@
 .state-index-menu {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
-  .text_btn {
+  .text-btn {
     padding: 5px 9px !important;
     &:hover {
       color: $primary-red;
     }
   }
 
-  .text_item {
+  .text-item {
     text-align: left;
   }
 }
 
 @media screen and (min-width: 0) and (max-width: $medium) {
-  .bottom_header {
+  .bottom-header {
     display: none;
     z-index: -1;
   }

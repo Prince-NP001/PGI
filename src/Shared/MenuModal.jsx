@@ -25,33 +25,33 @@ const MenuModal = () => {
       disablePadding
     >
       <List className="main-menu-list" component="div">
-        <ListItemButton className="list_btn">
-          <ListItemText className="text_item" primary="HOME" />
+        <ListItemButton className="list-btn">
+          <ListItemText className="text-item" primary="HOME" />
         </ListItemButton>
-        <ListItemButton className="list_btn">
-          <ListItemText className="text_item" primary="ABOUT PGI-D" />
+        <ListItemButton className="list-btn">
+          <ListItemText className="text-item" primary="ABOUT PGI-D" />
         </ListItemButton>
         <ListItemButton
-          className="list_btn"
-          id="status_indux_head"
-          onClick={() => handleOpen("status_indux_head")}
+          className="list-btn"
+          id="status-indux-head"
+          onClick={() => handleOpen("status-indux-head")}
         >
-          <ListItemText className="text_item" primary="STATES INDEX" />
-          {currentOpenId === "status_indux_head" ? (
+          <ListItemText className="text-item" primary="STATES INDEX" />
+          {currentOpenId === "status-indux-head" ? (
             <ExpandLess />
           ) : (
             <ExpandMore />
           )}
         </ListItemButton>
         <Collapse
-          in={currentOpenId === "status_indux_head"}
+          in={currentOpenId === "status-indux-head"}
           timeout="auto"
           unmountOnExit
         >
-          <List className="status_indux_head" component={Paper} disablePadding>
-            <Grid className="States_grid" container>
+          <List className="status-indux-head" component={Paper} disablePadding>
+            <Grid className="States-grid" container>
               <Grid item xs={12} sm={6} md={3}>
-                <ul className="states_list">
+                <ul className="states-list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
                   <li>Daman & Diu</li>
@@ -65,7 +65,7 @@ const MenuModal = () => {
                 </ul>
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
-                <ul className="states_list">
+                <ul className="states-list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
                   <li>Daman & Diu</li>
@@ -79,7 +79,7 @@ const MenuModal = () => {
                 </ul>
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
-                <ul className="states_list">
+                <ul className="states-list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
                   <li>Daman & Diu</li>
@@ -93,7 +93,7 @@ const MenuModal = () => {
                 </ul>
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
-                <ul className="states_list">
+                <ul className="states-list">
                   <li>Andaman and Nicobar Islands</li>
                   <li>Bihar</li>
                   <li>Daman & Diu</li>
@@ -110,43 +110,43 @@ const MenuModal = () => {
           </List>
         </Collapse>
         <ListItemButton
-          className="list_btn"
-          id="reports_head"
+          className="list-btn"
+          id="reports-head"
           sx={{ height: "100%" }}
-          onClick={() => handleOpen("reports_head")}
+          onClick={() => handleOpen("reports-head")}
           disablePadding
         >
-          <ListItemText className="text_item" primary="REPORTS" />
-          {currentOpenId === "reports_head" ? <ExpandLess /> : <ExpandMore />}
+          <ListItemText className="text-item" primary="REPORTS" />
+          {currentOpenId === "reports-head" ? <ExpandLess /> : <ExpandMore />}
         </ListItemButton>
         <Collapse
-          in={currentOpenId === "reports_head"}
+          in={currentOpenId === "reports-head"}
           timeout="auto"
           unmountOnExit
         >
-          <List className="status_indux_head" component={Paper} disablePadding>
-            <ListItemButton className="text_btn">
+          <List className="status-indux-head" component={Paper} disablePadding>
+            <ListItemButton className="text-btn">
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="PGI-D-2018-19 & 2019-20 ENGLISH"
               />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn">
+            <ListItemButton className="text-btn">
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="PGI-D-2018-19 & 2019-20 HINDI"
               />
             </ListItemButton>
           </List>
         </Collapse>
         <ListItemButton
-          className="list_btn"
-          id="categories_head"
-          onClick={() => handleOpen("categories_head")}
+          className="list-btn"
+          id="categories-head"
+          onClick={() => handleOpen("categories-head")}
         >
-          <ListItemText className="text_item" primary="CATEGORIES" />
-          {currentOpenId === "categories_head" ? (
+          <ListItemText className="text-item" primary="CATEGORIES" />
+          {currentOpenId === "categories-head" ? (
             <ExpandLess />
           ) : (
             <ExpandMore />
@@ -154,46 +154,46 @@ const MenuModal = () => {
         </ListItemButton>
 
         <Collapse
-          in={currentOpenId === "categories_head"}
+          in={currentOpenId === "categories-head"}
           timeout="auto"
           unmountOnExit
         >
-          <List className="status_indux_head" component={Paper} disablePadding>
-            <ListItemButton className="text_btn">
-              <ListItemText className="text_item" primary="Outcomes" />
+          <List className="status-indux-head" component={Paper} disablePadding>
+            <ListItemButton className="text-btn">
+              <ListItemText className="text-item" primary="Outcomes" />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn" sx={{ pl: 4 }}>
+            <ListItemButton className="text-btn" sx={{ pl: 4 }}>
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="Effective Classroom transacion (ECT)"
               />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn" sx={{ pl: 4 }}>
+            <ListItemButton className="text-btn" sx={{ pl: 4 }}>
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="Infrastructure, facilities, Student Entitlements (IF & SE)"
               />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn" sx={{ pl: 4 }}>
+            <ListItemButton className="text-btn" sx={{ pl: 4 }}>
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="School Safely and Child Protection (SS & CP)"
               />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn" sx={{ pl: 4 }}>
+            <ListItemButton className="text-btn" sx={{ pl: 4 }}>
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="Digital Learning (DL)"
               />
             </ListItemButton>
             <Divider />
-            <ListItemButton className="text_btn" sx={{ pl: 4 }}>
+            <ListItemButton className="text-btn" sx={{ pl: 4 }}>
               <ListItemText
-                className="text_item"
+                className="text-item"
                 primary="Governance Processes(GP)"
               />
             </ListItemButton>

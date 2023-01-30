@@ -55,7 +55,7 @@ const Navbar = () => {
         </Container>
         <Divider className="divider" sx={{ margin: 0 }} />
         <Container maxWidth={"lg"}>
-          <Box disableGutters component="div" className="bottom_header">
+          <Box disableGutters component="div" className="bottom-header">
             <ul>
               <li
                 className="btn"
