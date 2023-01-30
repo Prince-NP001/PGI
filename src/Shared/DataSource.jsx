@@ -4,7 +4,7 @@ import React from "react";
 import { useInView } from "react-intersection-observer";
 import pic from "../images/Header_and_Footer/Analytics1.png";
 import pic2 from "../images/Header_and_Footer/Analytics2.png";
-const FooterMiddle = () => {
+const DataSource = () => {
   const { ref: dataRef1, inView: inView1 } = useInView();
   const { ref: imgRef1, inView: inView2 } = useInView();
   const { ref: dataRef2, inView: inView3 } = useInView();
@@ -13,7 +13,12 @@ const FooterMiddle = () => {
   console.log(inView1);
   return (
     <Container disablePadding maxWidth={"lg"}>
-      <Grid container className="footer_2" alignItems="flex-start" spacing={16}>
+      <Grid
+        container
+        className="data-source"
+        alignItems="flex-start"
+        spacing={16}
+      >
         <Grid
           ref={dataRef1}
           item
@@ -42,7 +47,7 @@ const FooterMiddle = () => {
         </Grid>
         <Grid
           item
-          sx={{ textAlign: { xs: "center", lg: "right" } }}
+          sx={{ textAlign: { xs: "center", lg: "right" }, marginTop: "2em" }}
           className={`${"img"} ${inView2 ? "animateRight" : ""}`}
           md={5.5}
           xs={12}
@@ -84,7 +89,7 @@ const FooterMiddle = () => {
           <Box
             variant="p"
             ref={dataRef2}
-            className={`${"footer_2"} ${inView4 ? "animateRight" : ""}`}
+            className={`${"data-source"} ${inView4 ? "animateRight" : ""}`}
           >
             <Typography className="header" variant="h3">
               Methodology
@@ -106,4 +111,4 @@ const FooterMiddle = () => {
   );
 };
 
-export default FooterMiddle;
+export default DataSource;

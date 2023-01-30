@@ -12,7 +12,6 @@
   padding: 20px;
   transition: background 0.3s ease;
   & > h2 {
-    
     -webkit-box-orient: vertical;
     color: #131523;
     font-size: 1.125em;
@@ -50,12 +49,11 @@
     & > span {
       color: white;
     }
-    & > svg{
+    & > svg {
       fill: white;
     }
   }
 }
-
 
 .categories-and-card {
   display: flex;
@@ -128,7 +126,7 @@
     grid-template-columns: repeat(1, 1fr);
   }
   .pgid-card {
-    width: 80vw;
+    min-width: 80vw;
   }
 
   .categories-text-content {

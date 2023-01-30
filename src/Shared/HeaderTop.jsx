@@ -19,13 +19,13 @@ import "../styles/component/Header.scss";
 import MenuIcon from "@mui/icons-material/Menu";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-import Modal from "./Modal";
-const arr = ["HOME", "ABOUT PGI-D"];
+import MenuModal from "./MenuModal";
+
 const HeaderTop = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [currentId, setCurrentId] = useState(null);
-  const [currentOpenId, setCurrentOpenId] = useState(null);
-  const [modalOpen, setModalOpen] = useState(false);
+
+  const [MenuModalOpen, setMenuModalOpen] = useState(false);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     event.currentTarget.id === currentId
@@ -34,9 +34,6 @@ const HeaderTop = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  useEffect(() => {
-    console.log(currentOpenId === "status_indux_head");
-  }, [currentOpenId]);
   const handleClose = () => {
     setAnchorEl(null);
   };
@@ -121,7 +118,7 @@ const HeaderTop = () => {
                   <ListItemButton
                     id="main_menu"
                     className="main-icon"
-                    onClick={() => setModalOpen(!modalOpen)}
+                    onClick={() => setMenuModalOpen(!MenuModalOpen)}
                   >
                     <ListItemIcon size="large" edge="start">
                       <MenuIcon sx={{ color: "white" }} />
@@ -133,7 +130,7 @@ const HeaderTop = () => {
           </Grid>
         </Box>
       </Container>
-      {modalOpen && <Modal />}
+      {MenuModalOpen && <MenuModal />}
     </Box>
   );
 };

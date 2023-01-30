@@ -2,8 +2,9 @@
 .footer {
   padding-top: 60px;
 
-  .footer_1 {
+  .footer-top {
     justify-content: center;
+   
     .content {
       text-align: center;
       margin-top: 2vh;
@@ -14,7 +15,7 @@
       color: $primary-black;
     }
   }
-  .footer_2 {
+  .data-source {
     margin-top: 4vh;
     text-align: left;
     .header {
@@ -25,7 +26,7 @@
       letter-spacing: 0.1px;
       background-color: white;
       line-height: 1.2;
-      font-family: Poppins, sans-serif;
+      font-family: $primary-font;
     }
     .content {
       z-index: -1;
@@ -35,7 +36,7 @@
       line-height: 1.5;
       font-weight: 400;
       padding-top: 3vh;
-      font-family: Poppins, sans-serif;
+      font-family: $primary-font;
     }
     .MuiGrid-item {
       padding-top: 0 !important;
@@ -55,7 +56,7 @@
     font-weight: 500;
     letter-spacing: 0.07px;
   }
-  .about_pgid {
+  .about-pgid {
     list-style-type: ">";
 
     font-weight: 400;
@@ -68,7 +69,7 @@
         color: $primary-red;
       }
     }
-    .about_pgid_nested {
+    .about-pgid-nested {
       list-style-type: disc;
       padding-left: 16px;
       line-height: 2;
@@ -77,19 +78,19 @@
       color: #fff;
     }
   }
-  .about_pgid_nested_nic {
+  .about-pgid-nested-nic {
     padding-top: 3vh;
     letter-spacing: 0.14px;
     font-size: 0.75em;
     margin-bottom: 0px !important;
   }
 }
-.footer_bottom {
+.footer-bottom {
   color: $primary-white;
   background-color: $secondary-purple;
   padding: 1vh 0;
 
-  .text_footer {
+  .text-footer {
     font-family: $primary-font;
     font-size: 0.87em;
     letter-spacing: 0.37px;
