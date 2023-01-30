@@ -55,7 +55,11 @@ const DistrictLineChart = () => {
         },
       },
     },
-
+    legend: {
+      verticalAlign: "top",
+      align: "left",
+      x: -20,
+    },
     series: [
       {
         name: "2020-21",
@@ -75,12 +79,7 @@ const DistrictLineChart = () => {
           condition: {
             maxWidth: 500,
           },
-          chartOptions: {
-            legend: {
-              verticalAlign: "top",
-              y: 12,
-            },
-          },
+          chartOptions: {},
         },
       ],
     },

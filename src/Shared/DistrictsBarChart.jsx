@@ -77,7 +77,11 @@ const DistrictsBarChart = () => {
       shared: true,
       useHTML: true,
     },
-
+    legend: {
+      verticalAlign: "top",
+      align: "left",
+      x: -20,
+    },
     plotOptions: {
       series: {
         pointWidth:
