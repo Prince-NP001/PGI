@@ -20,7 +20,6 @@ export default function IndiaBarChart() {
           : document.body.offsetWidth > 300
           ? 320
           : 260,
-      animation: true,
     },
     accessibility: {
       description: "Showing India Detail in bar",
@@ -75,7 +74,6 @@ export default function IndiaBarChart() {
         name: "PGI-District Grading",
         cursor: "pointer",
         data: data,
-
         tooltip: {
           headerFormat: "",
           pointFormat:
