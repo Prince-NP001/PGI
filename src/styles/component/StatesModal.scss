@@ -80,3 +80,9 @@
           }
       }
     }
+    @media screen and (min-width: 0) and (max-width: $medium) {
+      .states-modal,.modal-report,.modal-categories {
+        display: none;
+        z-index: -1;
+      }
+    }

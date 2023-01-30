@@ -16,11 +16,12 @@ const NumOfDistricts = () => {
     setHandleClick(!handleClick);
   };
   return (
-    <Box className="chart-graph">
+    <Box className="chart-graph" sx={{ padding: "10px 0" }}>
       <Box className="chart-graph-content">
         <SectionHeader
           title="Number of Districts in Different Grades of PGI-District (National)"
           ClickTrigger={handleClickFunc}
+          chartOrListTrigger={handleClick}
         />
         <Container>
           {!handleClick ? (

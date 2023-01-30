@@ -56,7 +56,7 @@ const HeaderTop = () => {
             <Grid item>
               <Grid container sx={{ display: "flex", justifyContent: "end" }}>
                 <ButtonGroup
-                  className="btn_group"
+                  className="btn-group"
                   sx={{}}
                   variant="text"
                   aria-label="text button group"

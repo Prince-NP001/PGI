@@ -9,12 +9,12 @@ import { AppBar, Toolbar } from "@mui/material";
 const Header = () => {
   return (
     <>
-      {/* <HeaderTop />
+      <HeaderTop />
       <AppBar disablePadding>
         <Toolbar className="head" disableGutters>
           <Navbar />
         </Toolbar>
-      </AppBar> */}
+      </AppBar>
     </>
   );
 };
