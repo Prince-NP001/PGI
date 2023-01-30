@@ -6,6 +6,8 @@
 }
 
 .header-bottom {
+  display: flex;
+  color: $primary-black;
   background: $primary-white;
   flex-direction: column;
   width: 100%;
@@ -13,7 +15,6 @@
 .head {
   display: flex;
   flex-direction: column;
-  
   z-index: 1000;
 }
 .header {
