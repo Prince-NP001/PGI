@@ -9,23 +9,6 @@ import SectionHeader from "./SectionHeader";
 export default function ChartAndGraphSection() {
   const [chartOrListTrigger, setChartOrListTrigger] = useState(true);
 
-  useEffect(() => {
-    let headerIcon = document.querySelector(".chart-graph-btn-container");
-    if (chartOrListTrigger) {
-      headerIcon = headerIcon.firstElementChild;
-      headerIcon.style.backgroundColor = "#7e84a3";
-      headerIcon.style.color = "white";
-      headerIcon.nextSibling.style.backgroundColor = "white";
-      headerIcon.nextSibling.style.color = "#7e84a3";
-    } else {
-      headerIcon = headerIcon.lastElementChild;
-      headerIcon.style.backgroundColor = "#7e84a3";
-      headerIcon.style.color = "white";
-      headerIcon.previousSibling.style.backgroundColor = "white";
-      headerIcon.previousSibling.style.color = "#7e84a3";
-    }
-  }, [chartOrListTrigger]);
-
   const ClickTrigger = () => {
     setChartOrListTrigger(!chartOrListTrigger);
   };
@@ -35,6 +18,7 @@ export default function ChartAndGraphSection() {
       <SectionHeader
         title="PGI-District Grading"
         mid_title="National"
+        chartOrListTrigger={chartOrListTrigger}
         ClickTrigger={ClickTrigger}
       />
       <Box>

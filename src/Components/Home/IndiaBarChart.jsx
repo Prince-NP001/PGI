@@ -20,6 +20,7 @@ export default function IndiaBarChart() {
           : document.body.offsetWidth > 300
           ? 320
           : 260,
+      animation: false,
     },
     accessibility: {
       description: "Showing India Detail in bar",
