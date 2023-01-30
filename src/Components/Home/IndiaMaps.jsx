@@ -13,7 +13,6 @@ export default function IndiaMaps() {
   const mapOptions = {
     chart: {
       map: "countries/in/custom/in-all-disputed",
-      animation: true,
       pinchType: "none",
       zoomType: "none",
       width:
@@ -110,7 +109,7 @@ export default function IndiaMaps() {
         type: "map",
         allAreas: false,
         showInLegend: false,
-        cursor: "auto",
+        cursor: "pointer",
         name: "States",
         borderColor: "rgb(1, 131, 131)",
         color: "#42FFF6",

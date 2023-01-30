@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../styles/Home.scss";
 import IndiaMaps from "./IndiaMaps.jsx";
 import IndiaBarChart from "./IndiaBarChart.jsx";
@@ -7,28 +7,58 @@ import { Box, Typography } from "@mui/material";
 import SectionHeader from "./SectionHeader";
 
 export default function ChartAndGraphSection() {
+  const [chartOrListTrigger, setChartOrListTrigger] = useState(true);
+
+  useEffect(() => {
+    let headerIcon = document.querySelector(".chart-graph-btn-container");
+    if (chartOrListTrigger) {
+      headerIcon = headerIcon.firstElementChild;
+      headerIcon.style.backgroundColor = "#7e84a3";
+      headerIcon.style.color = "white";
+      headerIcon.nextSibling.style.backgroundColor = "white";
+      headerIcon.nextSibling.style.color = "#7e84a3";
+    } else {
+      headerIcon = headerIcon.lastElementChild;
+      headerIcon.style.backgroundColor = "#7e84a3";
+      headerIcon.style.color = "white";
+      headerIcon.previousSibling.style.backgroundColor = "white";
+      headerIcon.previousSibling.style.color = "#7e84a3";
+    }
+  }, [chartOrListTrigger]);
+
+  const ClickTrigger = () => {
+    setChartOrListTrigger(!chartOrListTrigger);
+  };
+
   return (
     <Box className="chart-graph-content">
-      <SectionHeader title="PGI-District Grading" mid_title="National" />
+      <SectionHeader
+        title="PGI-District Grading"
+        mid_title="National"
+        ClickTrigger={ClickTrigger}
+      />
       <Box>
-        <Box className="charts-and-graph" id="national-charts-and-graph">
-          <Box className="map-and-chart-bundle">
-            <IndiaMaps />
-            <IndiaBarChart />
+        {chartOrListTrigger ? (
+          <Box className="charts-and-graph" id="national-charts-and-graph">
+            <Box className="map-and-chart-bundle">
+              <IndiaMaps />
+              <IndiaBarChart />
+            </Box>
+            <Box className="map-color-bar">
+              {data.map((el) => {
+                return <MapColorBar key={el.id} data={el} />;
+              })}
+            </Box>
+            )
           </Box>
-          <Box className="map-color-bar">
-            {data.map((el) => {
-              return <MapColorBar key={el.id} data={el} />;
-            })}
+        ) : (
+          <Box
+            className="charts-and-graph-list-view"
+            id="national-charts-and-graph-list-view"
+          >
+            <NationalListView />
           </Box>
-        </Box>
-        <Box
-          className="charts-and-graph-list-view"
-          id="national-charts-and-graph-list-view"
-          style={{ display: "none" }}
-        >
-          <NationalListView />
-        </Box>
+        )}
       </Box>
     </Box>
   );

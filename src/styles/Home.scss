@@ -55,13 +55,16 @@
             font-size: 1.8rem;
           }
         }
-        & > .select-month {
+        .select-month {
           border: 1px solid #d7dbec;
           border-radius: 4px;
           color: #5a607f;
           font-size: 0.875em;
           letter-spacing: 0.1px;
-          padding: 0.2rem 2.25rem 0.2rem 0.75rem !important;
+          padding: 0.2rem 2.5rem 0.2rem 0.75rem !important;
+          & > div {
+            padding: 0.4rem 2.5rem 0.4rem 0.2rem !important;
+          }
         }
       }
     }
@@ -101,10 +104,12 @@
           justify-content: flex-start;
           align-items: center;
           gap: 1em;
-          font-size: 13px;
           & > div {
             width: 10px;
             height: 10px;
+          }
+          & > span {
+            font-size: 0.815em;
           }
         }
       }
