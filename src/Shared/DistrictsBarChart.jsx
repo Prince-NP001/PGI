@@ -6,7 +6,31 @@ const DistrictsBarChart = () => {
   const options = {
     chart: {
       type: "column",
+      width:
+        document.body.offsetWidth > 1350
+          ? 1150
+          : document.body.offsetWidth > 1190
+          ? 950
+          : document.body.offsetWidth > 890
+          ? 710
+          : document.body.offsetWidth > 600
+          ? 472
+          : document.body.offsetWidth > 460
+          ? 373
+          : document.body.offsetWidth > 344
+          ? 272
+          : 250,
+      height:
+        document.body.offsetWidth > 1350
+          ? 400
+          : document.body.offsetWidth > 1100
+          ? 350
+          : document.body.offsetWidth > 400
+          ? 300
+          : 260,
+      animation: true,
     },
+    credits: false,
 
     xAxis: {
       categories: [
@@ -27,18 +51,29 @@ const DistrictsBarChart = () => {
 
       crosshair: true,
     },
+    title: {
+      text: "",
+    },
     yAxis: {
       min: 0,
       title: {
-        text: "District",
+        text: "",
       },
     },
     tooltip: {
-      headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-      pointFormat:
-        '<tr><td style="color:black;padding:0">{series.name}: </td>' +
-        '<td style="padding:0"><b>{point.y:.1f} District</b></td></tr>',
-      footerFormat: "</table>",
+      headerFormat: '<span style="font-size:10px">{point.key}</span>',
+      pointFormat: `<table>
+      <tr>
+      <td style='color:{series.color}; padding:0}">{series.name}: </td>
+      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      </tr>
+      <tr>
+      <td style='color:{series.color}; padding:0}">{series.name}: </td>
+      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      </tr>
+      </table>
+       `,
+
       shared: true,
       useHTML: true,
     },
@@ -46,7 +81,19 @@ const DistrictsBarChart = () => {
 
     plotOptions: {
       series: {
-        pointWidth: 36,
+        pointWidth:
+          document.body.offsetWidth > 1350
+            ? 32
+            : document.body.offsetWidth > 1100
+            ? 20
+            : document.body.offsetWidth > 460
+            ? 10
+            : document.body.offsetWidth > 344
+            ? 7
+            : 6,
+      },
+      column: {
+        pointPadding: 0,
       },
     },
 
@@ -54,18 +101,16 @@ const DistrictsBarChart = () => {
       {
         name: "2020-21",
         data: [0, 4, 149, 258, 213, 77, 21, 6, 12, 1],
+        color: "rgb(56, 56, 118)",
       },
       {
         name: "2019-20",
         data: [0, 3, 85, 274, 241, 86, 40, 3, 1, 0],
+        color: "rgb(217, 65, 72)",
       },
     ],
   };
-  return (
-    <div className="highcharts-figure">
-      <HighchartsReact highcharts={Highcharts} options={options} />
-    </div>
-  );
+  return <HighchartsReact highcharts={Highcharts} options={options} />;
 };
 
 export default DistrictsBarChart;

@@ -18,7 +18,7 @@ const StatesModal = (props) => {
 
   return (
     <Box className="states-modal">
-      <Container maxWidth={"lg"}>
+      <Container maxWidth={"lg"} disableGutters>
         <Grid container disablePadding sx={{ pl: 4 }}>
           <Grid item xs={12} sm={6} lg={3} md={3}>
             <ul onClick={handleClose} className="states-list">
