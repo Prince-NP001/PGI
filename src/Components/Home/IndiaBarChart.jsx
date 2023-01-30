@@ -20,6 +20,7 @@ export default function IndiaBarChart() {
           ? 320
           : 260,
       animation: true,
+      crosshair: true,
     },
     accessibility: {
       description: "Showing India Detail in bar",
