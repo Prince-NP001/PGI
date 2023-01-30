@@ -30,7 +30,7 @@ export default function IndiaBarChart() {
 
     xAxis: {
       type: "category",
-      margin: 4,
+      margin: 4,            
       categories: [
         "Daksh",
         "Utkarsh",
