@@ -13,11 +13,11 @@ const LinksFooter = () => {
               <Typography className="link" paddingLeft={2} variant="h2">
                 Links
               </Typography>
-              <ul className="about_pgid">
+              <ul className="about-pgid">
                 <li style={{ paddingLeft: "1.2vw" }}>About PGI-D</li>
                 <li style={{ paddingLeft: "1.2vw" }}>
                   Report
-                  <ul className="about_pgid_nested">
+                  <ul className="about-pgid-nested">
                     <li>PGI-D-2018-19 & 2019-20 ENGLISH</li>
                     <li>PGI-D-2018-19 & 2019-20 HINDI</li>
                   </ul>
@@ -28,7 +28,7 @@ const LinksFooter = () => {
               <Typography className="link" paddingLeft={2} variant="h2">
                 Categories
               </Typography>
-              <ul className="about_pgid">
+              <ul className="about-pgid">
                 <li style={{ paddingLeft: "1.2vw" }}>Outcomes</li>
                 <li style={{ paddingLeft: "1.2vw" }}>
                   Effective Classroom Transaction (ECT)
@@ -48,7 +48,7 @@ const LinksFooter = () => {
             <Grid item xs={12} md={5} paddingTop={3}>
               <Box component="img" src={pic} />
               <Typography
-                className="about_pgid_nested_nic"
+                className="about-pgid-nested-nic"
                 paragraph
                 sx={{ paddingBottom: "0" }}
               >
@@ -56,7 +56,7 @@ const LinksFooter = () => {
                 National Informatics Centre (NIC), Ministry of Electronics &
                 Information Technology.
               </Typography>
-              <Typography className="about_pgid_nested_nic" paragraph>
+              <Typography className="about-pgid-nested-nic" paragraph>
                 Content owned & provided by Department of School Education &
                 Literacy, Ministry of Education, Government of India
               </Typography>
@@ -64,7 +64,7 @@ const LinksFooter = () => {
           </Grid>
         </Container>
       </Box>
-      <Box className="footer_bottom">
+      <Box className="footer-bottom">
         {" "}
         <Container maxWidth={"xl"} disableGutters>
           <Grid container justifyContent={"space-evenly"}>
@@ -84,7 +84,7 @@ const LinksFooter = () => {
               <Typography
                 gutterBottom
                 alignItems="center"
-                className="text_footer"
+                className="text-footer"
               >
                 {" "}
                 Visitor Counter :

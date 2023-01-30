@@ -13,7 +13,12 @@ const DataSource = () => {
   console.log(inView1);
   return (
     <Container disablePadding maxWidth={"lg"}>
-      <Grid container className="footer_2" alignItems="flex-start" spacing={16}>
+      <Grid
+        container
+        className="data-source"
+        alignItems="flex-start"
+        spacing={16}
+      >
         <Grid
           ref={dataRef1}
           item
@@ -84,7 +89,7 @@ const DataSource = () => {
           <Box
             variant="p"
             ref={dataRef2}
-            className={`${"footer_2"} ${inView4 ? "animateRight" : ""}`}
+            className={`${"data-source"} ${inView4 ? "animateRight" : ""}`}
           >
             <Typography className="header" variant="h3">
               Methodology
