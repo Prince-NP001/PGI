@@ -18,8 +18,8 @@ export default function ChartAndGraphSection() {
       <SectionHeader
         title="PGI-District Grading"
         mid_title="National"
-        chartOrListTrigger={chartOrListTrigger}
-        ClickTrigger={ClickTrigger}
+        stateValue={chartOrListTrigger}
+        StateValueFunc={ClickTrigger}
       />
       <Box>
         {chartOrListTrigger ? (
