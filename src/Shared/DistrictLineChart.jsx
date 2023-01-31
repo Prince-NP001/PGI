@@ -31,11 +31,11 @@ const DistrictLineChart = () => {
       pointFormat: `<table>
       <tr>
       <td style='color:{series.color}; padding:0}">{series.name}: </td>
-      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      <td style="padding:1"><b>{point.y} District</b></td>
       </tr>
       <tr>
       <td style='color:{series.color}; padding:0}">{series.name}: </td>
-      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      <td style="padding:1"><b>{point.y} District</b></td>
       </tr>
       </table>
        `,
@@ -47,12 +47,9 @@ const DistrictLineChart = () => {
     title: {
       text: "",
     },
-
     plotOptions: {
       series: {
-        animation: {
-          duration: 2000,
-        },
+        animation: false,
       },
     },
     legend: {
