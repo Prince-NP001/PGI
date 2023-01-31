@@ -2,10 +2,14 @@ import HighchartsReact from "highcharts-react-official";
 import React from "react";
 import Highcharts from "highcharts";
 import "../styles/component/DistrictsBarChart.scss";
+import { Box } from "@mui/system";
+import { useInView } from "react-intersection-observer";
 const DistrictsBarChart = () => {
+  const { ref: barRef, inView: barView } = useInView();
   const options = {
     chart: {
       type: "column",
+
       width:
         document.body.offsetWidth > 1350
           ? 1150
@@ -28,7 +32,6 @@ const DistrictsBarChart = () => {
           : document.body.offsetWidth > 400
           ? 300
           : 260,
-      animation: true,
     },
     credits: false,
 
@@ -65,11 +68,11 @@ const DistrictsBarChart = () => {
       pointFormat: `<table>
       <tr>
       <td style='color:{series.color}; padding:0}">{series.name}: </td>
-      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      <td style="padding:1"><b>{point.y} District</b></td>
       </tr>
       <tr>
       <td style='color:{series.color}; padding:0}">{series.name}: </td>
-      <td style="padding:1"><b>{point.y:.1f} District</b></td>
+      <td style="padding:1"><b>{point.y} District</b></td>
       </tr>
       </table>
        `,
@@ -84,6 +87,7 @@ const DistrictsBarChart = () => {
     },
     plotOptions: {
       series: {
+        animation: false,
         pointWidth:
           document.body.offsetWidth > 1350
             ? 32
@@ -113,7 +117,11 @@ const DistrictsBarChart = () => {
       },
     ],
   };
-  return <HighchartsReact highcharts={Highcharts} options={options} />;
+  return (
+    <Box ref={barRef} className={` ${barView ? "animateTop" : ""}`}>
+      <HighchartsReact highcharts={Highcharts} options={options} />;
+    </Box>
+  );
 };
 
 export default DistrictsBarChart;
