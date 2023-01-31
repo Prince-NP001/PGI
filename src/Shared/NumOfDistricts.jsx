@@ -11,20 +11,20 @@ import { Box, Container } from "@mui/material";
 import SectionHeader from "../Components/Home/SectionHeader";
 
 const NumOfDistricts = () => {
-  const [handleClick, setHandleClick] = useState(true);
-  const handleClickFunc = () => {
-    setHandleClick(!handleClick);
+  const [barOrLineChart, setbarOrLineChart] = useState(true);
+  const barOrLineChartFunc = () => {
+    setbarOrLineChart(!barOrLineChart);
   };
   return (
     <Box className="chart-graph" sx={{ padding: "10px 0" }}>
       <Box className="chart-graph-content">
         <SectionHeader
           title="Number of Districts in Different Grades of PGI-District (National)"
-          ClickTrigger={handleClickFunc}
-          chartOrListTrigger={handleClick}
+          stateValue={barOrLineChart}
+          StateValueFunc={barOrLineChartFunc}
         />
         <Container>
-          {!handleClick ? (
+          {!barOrLineChart ? (
             <div className="charts-district" id="national-district-bar-chart">
               <DistrictLineChart />
             </div>
