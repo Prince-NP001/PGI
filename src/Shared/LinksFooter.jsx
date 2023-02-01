@@ -2,14 +2,14 @@ import { Box, Grid, Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import pic from "../images/Header_and_Footer/NIC.png";
 import React from "react";
-
+import "../styles/component/Footer.scss";
 const LinksFooter = () => {
   return (
     <>
       <Box className="linksfooter">
         <Container maxWidth={"lg"}>
           <Grid justifyContent={"center"} container columns={16} spacing={4}>
-            <Grid item xs={12} md={4} paddingTop={3}>
+            <Grid item xs={12} md={3.75} paddingTop={3}>
               <Typography className="link" paddingLeft={2} variant="h2">
                 Links
               </Typography>
@@ -45,7 +45,7 @@ const LinksFooter = () => {
                 </li>
               </ul>
             </Grid>
-            <Grid item xs={12} md={5} paddingTop={3}>
+            <Grid item xs={12} md={5.25} paddingTop={3}>
               <Box component="img" src={pic} />
               <Typography
                 className="about-pgid-nested-nic"
@@ -66,14 +66,14 @@ const LinksFooter = () => {
       </Box>
       <Box className="footer-bottom">
         {" "}
-        <Container maxWidth={"xl"} disableGutters>
+        <Container maxWidth={"lg"} disableGutters>
           <Grid container justifyContent={"space-evenly"}>
             <Grid item md={8}>
               <Typography
                 gutterBottom
                 textAlign={"left"}
                 alignItems={"initial"}
-                className="text_footer"
+                className="text-footer"
                 sx={{ flexWrap: "wrap" }}
               >
                 © Copyright 2023 Department of School Education & Literacy,

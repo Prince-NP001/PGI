@@ -47,23 +47,24 @@
 .linksfooter {
   margin-top: 4em !important;
   text-align: left;
-  padding: 3em 0;
+  font-family: $primary-font;
+  padding: 60px 0;
   color: $primary-white;
   background-color: $primary-purple;
   .link {
     color: #fff;
-    font-size: 1.1em;
+    font-size: 1.125em;
     font-weight: 500;
     letter-spacing: 0.07px;
   }
   .about-pgid {
     list-style-type: ">";
-
+ 
     font-weight: 400;
     padding-top: 2vh;
     line-height: 2;
     letter-spacing: 0.14px;
-    font-size: 0.775em;
+    font-size: 0.875em;
     li {
       &:hover {
         color: $primary-red;
@@ -88,12 +89,15 @@
 .footer-bottom {
   color: $primary-white;
   background-color: $secondary-purple;
-  padding: 1vh 0;
+  padding: 10px 0;
+  font-family: $primary-font;
+  display: flex;
+  align-items: center;
 
   .text-footer {
     font-family: $primary-font;
-    font-size: 0.87em;
+    font-size: 0.77em;
     letter-spacing: 0.37px;
-    padding: 0 2.5vw;
+    padding: 0 4vw;
   }
 }
