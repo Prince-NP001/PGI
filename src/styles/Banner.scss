@@ -24,11 +24,18 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    color: white;
     &:first-child {
       left: 0;
     }
     &:last-child {
       right: 0;
+    }
+    & > * {
+      transform: scale(1.5);
+    }
+    &:disabled {
+      display: none;
     }
   }
   .home-banner-slider {
