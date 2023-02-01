@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
 import SingleBanner from "./SingleBannner.jsx";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
 
 export default function Banner() {
   const [Slider_position, setSlider_position] = useState(0);
   const [Xmovement, setXmovement] = useState(0);
   const [iniPos, setIniPos] = useState(0);
-
-  const [moveAndDown, setMoveAndDown] = useState(false);
 
   var slider_timeout;
   useEffect(() => {
@@ -43,16 +41,10 @@ export default function Banner() {
 
   const HandlemouseDown = (e) => {
     setIniPos(e.clientX);
-    document
-      .querySelector(".home-banner-slider")
-      .addEventListener("mousedown mousemove", () => {
-        setMoveAndDown(true);
-      });
   };
 
   const HandlemouseUp = (e) => {
     if (iniPos === e.clientX) return;
-    setMoveAndDown(false);
     setXmovement(iniPos - e.clientX);
   };
 

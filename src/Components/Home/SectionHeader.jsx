@@ -22,13 +22,13 @@ export default function SectionHeader(props) {
       <Box className="chart-graph-buttons-and-select">
         <Box className="chart-graph-btn-container">
           <Button
-            onClick={!props.stateValue ? props.StateValueFunc : ""}
+            onClick={!props.stateValue ? props.StateValueFunc : console.log()}
             className={`${props.stateValue ? "active-btn" : ""}`}
           >
             <BarChartIcon />
           </Button>
           <Button
-            onClick={props.stateValue ? props.StateValueFunc : ""}
+            onClick={props.stateValue ? props.StateValueFunc : console.log()}
             className={`${!props.stateValue ? "active-btn" : ""}`}
           >
             <FormatListBulletedIcon />
