@@ -16,7 +16,7 @@ const NumOfDistricts = () => {
     setbarOrLineChart(!barOrLineChart);
   };
   return (
-    <Box className="chart-graph" sx={{ padding: "10px 0" }}>
+    <Box className="chart-graph" sx={{ padding: "10px 0 100px" }}>
       <Box className="chart-graph-content">
         <SectionHeader
           title="Number of Districts in Different Grades of PGI-District (National)"

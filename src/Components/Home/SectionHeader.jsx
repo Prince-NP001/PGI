@@ -15,53 +15,22 @@ import {
 export default function SectionHeader(props) {
   const [selectValue, setSelectValue] = useState("2021-22");
 
-  const handleClickMap = (e) => {
-    if (!props.stateValue) {
-      props.StateValueFunc();
-
-      let headerIcon = e.currentTarget;
-      if (!props.stateValue) {
-        headerIcon.style.backgroundColor = "#7e84a3";
-        headerIcon.style.color = "white";
-        headerIcon.nextSibling.style.backgroundColor = "white";
-        headerIcon.nextSibling.style.color = "#7e84a3";
-      } else {
-        headerIcon.style.backgroundColor = "#7e84a3";
-        headerIcon.style.color = "white";
-        headerIcon.previousSibling.style.backgroundColor = "white";
-        headerIcon.previousSibling.style.color = "#7e84a3";
-      }
-    }
-  };
-  const handleClickBar = (e) => {
-    if (props.stateValue) {
-      props.StateValueFunc();
-
-      let headerIcon = e.currentTarget;
-      if (!props.stateValue) {
-        headerIcon.style.backgroundColor = "#7e84a3";
-        headerIcon.style.color = "white";
-        headerIcon.nextSibling.style.backgroundColor = "white";
-        headerIcon.nextSibling.style.color = "#7e84a3";
-      } else {
-        headerIcon.style.backgroundColor = "#7e84a3";
-        headerIcon.style.color = "white";
-        headerIcon.previousSibling.style.backgroundColor = "white";
-        headerIcon.previousSibling.style.color = "#7e84a3";
-      }
-    }
-  };
-
   return (
     <Box className="chart-graph-header">
       <Typography component={"h2"}>{props.title}</Typography>
       <Typography component={"h2"}>{props.mid_title}</Typography>
       <Box className="chart-graph-buttons-and-select">
         <Box className="chart-graph-btn-container">
-          <Button onClick={handleClickMap}>
+          <Button
+            onClick={props.StateValueFunc}
+            className={`${props.stateValue ? "active-btn" : ""}`}
+          >
             <BarChartIcon />
           </Button>
-          <Button onClick={handleClickBar}>
+          <Button
+            onClick={props.StateValueFunc}
+            className={`${!props.stateValue ? "active-btn" : ""}`}
+          >
             <FormatListBulletedIcon />
           </Button>
         </Box>

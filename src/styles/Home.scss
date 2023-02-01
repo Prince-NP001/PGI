@@ -34,26 +34,29 @@
           display: flex;
           justify-content: center;
           align-items: center;
-        }
-        & > div:first-child > button {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 6px 10px;
-          min-width: 0 !important;
-          border: 1px solid #7e84a3;
-          color: #7e84a3;
-          background-color: white;
-          &:first-child {
-            border-radius: 4px 0 0 4px;
-            background-color: #7e84a3;
-            color: white;
+
+          .active-btn {
+            background-color: #7e84a3 !important;
+            color: white !important;
           }
-          &:last-child {
-            border-radius: 0px 4px 4px 0;
-          }
-          & > svg {
-            font-size: 1.8rem;
+
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 6px 10px;
+            min-width: 0 !important;
+            border: 1px solid #7e84a3;
+            color: #7e84a3;
+            &:first-child {
+              border-radius: 4px 0 0 4px;
+            }
+            &:last-child {
+              border-radius: 0px 4px 4px 0;
+            }
+            & > svg {
+              font-size: 1.8rem;
+            }
           }
         }
         .select-month {
@@ -202,11 +205,13 @@
 
 /* about pgi section  */
 section.about-pgid {
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10em;
   padding: 30px 50px;
+
   .left-about-section {
     max-width: 35vw;
     text-align: left;
