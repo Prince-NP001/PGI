@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
-import BarChartIcon from "@mui/icons-material/BarChart";
-import FormatListBulletedIcon from "@mui/icons-material/FormatListBulleted";
+import React, { useState } from "react";
+
 import "../styles/component/DistrictsBarChart.scss";
 
 import "../styles/Home.scss";
