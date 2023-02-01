@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from "react";
 import SingleBanner from "./SingleBannner.jsx";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button } from "@mui/material";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 export default function Banner() {
   const [Slider_position, setSlider_position] = useState(0);
   const [Xmovement, setXmovement] = useState(0);
   const [iniPos, setIniPos] = useState(0);
 
-  const [moveAndDown, setMoveAndDown] = useState(false);
-
   var slider_timeout;
   useEffect(() => {
     slider_timeout = setTimeout(() => {
       right_slider_push_button(true);
     }, 4000);
+    return () => {
+      clearTimeout(slider_timeout);
+    };
   }, [Slider_position]);
 
   const left_slider_push_button = () => {
-    window.clearTimeout(slider_timeout);
     if (Slider_position >= 0) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
@@ -29,7 +31,6 @@ export default function Banner() {
     }
   };
   const right_slider_push_button = (type = false) => {
-    window.clearTimeout(slider_timeout);
     if ((type && Slider_position === -700) || Slider_position === -700) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
@@ -43,16 +44,10 @@ export default function Banner() {
 
   const HandlemouseDown = (e) => {
     setIniPos(e.clientX);
-    document
-      .querySelector(".home-banner-slider")
-      .addEventListener("mousedown mousemove", () => {
-        setMoveAndDown(true);
-      });
   };
 
   const HandlemouseUp = (e) => {
     if (iniPos === e.clientX) return;
-    setMoveAndDown(false);
     setXmovement(iniPos - e.clientX);
   };
 
@@ -71,7 +66,7 @@ export default function Banner() {
         onClick={left_slider_push_button}
         className="slider-push-button"
       >
-        &larr;
+        <ChevronLeftIcon />
       </Button>
       <Box
         className="home-banner-slider"
@@ -87,7 +82,7 @@ export default function Banner() {
         onClick={right_slider_push_button}
         className="slider-push-button"
       >
-        &rarr;
+        <ChevronRightIcon />
       </Button>
     </>
   );
