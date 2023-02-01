@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import SingleBanner from "./SingleBannner.jsx";
 import { Box, Button } from "@mui/material";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 
 export default function Banner() {
   const [Slider_position, setSlider_position] = useState(0);
@@ -64,7 +66,7 @@ export default function Banner() {
         onClick={left_slider_push_button}
         className="slider-push-button"
       >
-        &larr;
+        <ChevronLeftIcon />
       </Button>
       <Box
         className="home-banner-slider"
@@ -80,7 +82,7 @@ export default function Banner() {
         onClick={right_slider_push_button}
         className="slider-push-button"
       >
-        &rarr;
+        <ChevronRightIcon />
       </Button>
     </>
   );
