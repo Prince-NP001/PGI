@@ -79,9 +79,6 @@ const Navbar = () => {
               <li
                 id="state-index-menu"
                 onClick={handleClick}
-                aria-controls={open ? "states-index-menu" : undefined}
-                aria-haspopup="true"
-                aria-expanded={open ? "true" : undefined}
                 className="btn"
                 variant="text"
                 color="inherit"

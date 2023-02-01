@@ -1,6 +1,7 @@
 import { Container, Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import "../styles/component/Footer.scss";
 import { useInView } from "react-intersection-observer";
 import pic from "../images/Header_and_Footer/Analytics1.png";
 import pic2 from "../images/Header_and_Footer/Analytics2.png";

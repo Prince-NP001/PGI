@@ -23,15 +23,15 @@ const DistrictsBarChart = () => {
           ? 373
           : document.body.offsetWidth > 344
           ? 272
-          : 250,
+          : 220,
       height:
         document.body.offsetWidth > 1350
           ? 400
           : document.body.offsetWidth > 1100
-          ? 350
+          ? 360
           : document.body.offsetWidth > 400
-          ? 300
-          : 260,
+          ? 310
+          : 270,
     },
     credits: false,
 
@@ -90,9 +90,11 @@ const DistrictsBarChart = () => {
         animation: false,
         pointWidth:
           document.body.offsetWidth > 1350
-            ? 32
+            ? 36
             : document.body.offsetWidth > 1100
-            ? 20
+            ? 27
+            : document.body.offsetWidth > 600
+            ? 13
             : document.body.offsetWidth > 460
             ? 10
             : document.body.offsetWidth > 344
@@ -101,6 +103,7 @@ const DistrictsBarChart = () => {
       },
       column: {
         pointPadding: 0,
+        borderWidth: 0,
       },
     },
 
@@ -119,7 +122,7 @@ const DistrictsBarChart = () => {
   };
   return (
     <Box ref={barRef} className={` ${barView ? "animateTop" : ""}`}>
-      <HighchartsReact highcharts={Highcharts} options={options} />;
+      <HighchartsReact highcharts={Highcharts} options={options} />
     </Box>
   );
 };
