@@ -12,10 +12,12 @@ export default function Banner() {
     slider_timeout = setTimeout(() => {
       right_slider_push_button(true);
     }, 4000);
+    return () => {
+      clearTimeout(slider_timeout);
+    };
   }, [Slider_position]);
 
   const left_slider_push_button = () => {
-    window.clearTimeout(slider_timeout);
     if (Slider_position >= 0) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
@@ -27,7 +29,6 @@ export default function Banner() {
     }
   };
   const right_slider_push_button = (type = false) => {
-    window.clearTimeout(slider_timeout);
     if ((type && Slider_position === -700) || Slider_position === -700) {
       setSlider_position(0);
       document.querySelector(".home-banner-slider").style.transform =
